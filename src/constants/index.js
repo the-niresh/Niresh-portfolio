@@ -10,7 +10,7 @@ export const GITHUB_URL = "https://github.com/the-niresh"
 export const INSTAGRAM_URL = "https://www.instagram.com/the_niresh/"
 export const TWITTER_URL = "https://x.com/the_niresh"
 export const CV_URL = "https://drive.google.com/file/d/1KsB9mBeA8Zr_33fVSMbS6Ie_y4X-_G7s/view?usp=drive_link"
-export const PROJECT_1_URL = "https://nire-twitter-clone.onrender.com"
+export const PROJECT_1_URL = "https://nire-twitter-clone.vercel.app/"
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 3 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, RestAPI, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
