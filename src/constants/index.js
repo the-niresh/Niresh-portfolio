@@ -1,15 +1,16 @@
 import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import portfolio from "../assets/projects/project-3.jpg";
+import Xclone from "../assets/projects/X-clone.png";
 
 export const NAME = "Niresh"
-export const WEBSITE_URL = "http://niresh.in/"
+export const WEBSITE_URL = "https://niresh.in/"
 export const LINKEDIN_URL = "https://www.linkedin.com/in/the-niresh/"
 export const GITHUB_URL = "https://github.com/the-niresh"
 export const INSTAGRAM_URL = "https://www.instagram.com/the_niresh/"
 export const TWITTER_URL = "https://x.com/the_niresh"
 export const CV_URL = "https://drive.google.com/file/d/1KsB9mBeA8Zr_33fVSMbS6Ie_y4X-_G7s/view?usp=drive_link"
+export const PROJECT_1_URL = "https://nire-twitter-clone.onrender.com"
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 3 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, RestAPI, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -41,15 +42,24 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
   },
   {
+    title: "Twitter(X)-clone",
+    url: PROJECT_1_URL,
+    image: Xclone,
+    description:
+      "This is just a clone of X formerly known as Twitter with MERN stack and Tailwind CSS",
+    technologies: ["React", "Node", "MongoDB", "Express", "Tailwind"],
+  },
+  {
     title: "Task Management App",
     image: project2,
     description:
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["React", "Tailwind","HTML", "CSS"],
+    technologies: ["HTML", "CSS", "Angular", "Firebase"],
   },
   {
     title: "Personal Portfolio",
-    image: project3,
+    url: WEBSITE_URL,
+    image: portfolio,
     description:
       "Built a personal portfolio website that you're currently going through with React & Tailwind.",
     technologies: ["React", "Tailwind","HTML", "CSS"],
