@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import portfolio from "../assets/projects/project-3.jpg";
 import Xclone from "../assets/projects/X-clone.png";
+import Netflix from "../assets/projects/Netflix.png";
 
 export const NAME = "Niresh"
 export const WEBSITE_URL = "https://niresh.in/"
@@ -11,6 +12,7 @@ export const INSTAGRAM_URL = "https://www.instagram.com/the_niresh/"
 export const TWITTER_URL = "https://x.com/the_niresh"
 export const CV_URL = "https://drive.google.com/file/d/1KsB9mBeA8Zr_33fVSMbS6Ie_y4X-_G7s/view?usp=drive_link"
 export const PROJECT_1_URL = "https://nire-twitter-clone.vercel.app/"
+export const NETFLIX_CLONE_URL = "https://netflix-clone-pied-ten.vercel.app/"
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 3 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, RestAPI, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -42,11 +44,19 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
   },
   {
+    title: "Netflix-clone",
+    url: NETFLIX_CLONE_URL,
+    image: Netflix,
+    description:
+      "This is just a clone of X formerly known as Twitter with MERN stack and Tailwind CSS",
+    technologies: ["React", "Node", "MongoDB", "Express", "Tailwind"],
+  },
+  {
     title: "Twitter(X)-clone",
     url: PROJECT_1_URL,
     image: Xclone,
     description:
-      "This is just a clone of X formerly known as Twitter with MERN stack and Tailwind CSS",
+      "This is just a clone of an OTT platform Netflix with MERN stack and Tailwind CSS",
     technologies: ["React", "Node", "MongoDB", "Express", "Tailwind"],
   },
   {
@@ -54,7 +64,7 @@ export const PROJECTS = [
     image: project2,
     description:
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+    technologies: ["React", "Node", "MongoDB", "Express"],
   },
   {
     title: "Personal Portfolio",
