@@ -1,6 +1,5 @@
-import project1 from "../assets/projects/project-1.jpg";
+import socially from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
-import portfolio from "../assets/projects/project-3.jpg";
 import Xclone from "../assets/projects/X-clone.png";
 import Netflix from "../assets/projects/Netflix.png";
 
@@ -11,8 +10,10 @@ export const GITHUB_URL = "https://github.com/the-niresh"
 export const INSTAGRAM_URL = "https://www.instagram.com/the_niresh/"
 export const TWITTER_URL = "https://x.com/the_niresh"
 export const CV_URL = "https://drive.google.com/file/d/1KsB9mBeA8Zr_33fVSMbS6Ie_y4X-_G7s/view?usp=drive_link"
-export const PROJECT_1_URL = "https://nire-twitter-clone.vercel.app/"
-export const NETFLIX_CLONE_URL = "https://netflix-clone-pied-ten.vercel.app/"
+export const PROJECT_1_URL = "https://nire-twitter-clone.onrender.com/"
+export const NETFLIX_CLONE_URL = "https://netflix-clone-kqqz.onrender.com/"
+export const SOCIALLY_CLONE_URL = "https://nextjs-socially-one.vercel.app/"
+export const TODO_PRO_URL = "https://todo-render-ooo8.onrender.com/"
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 3 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, RestAPI, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -33,15 +34,32 @@ export const EXPERIENCES = [
     description: `Contributed in developing an all JavaScript-based automation tool that certifies OTT apps on TV based on API implementation and integration using Node.js/Express.js in Backend and Lightning.js in Frontend. Automated testing processes using Cypress. Fixed over 250+ software bugs and optimized backend logic in Node.js and Lightning.js systems.`,
     technologies: ["Node", "Express","Lightning.js", "Cypress", "RestAPI"],
   },
+  {
+    year: "2021 - 2021",
+    role: "Software Developer - Intern",
+    company: "Sandeza Inc.",
+    description: `Worked on AWS to build voice agents for businesses using Node.js/Express.js in the backend as a Trainee. Trained on Node.js and AWS services like S3, Lambda, EC2, and CloudWatch.`,
+    technologies: ["Node", "Express","AWS", "S3", "EC2", "Lambda", "CloudWatch"],
+  },
 ];
 
 export const PROJECTS = [
+
   {
-    title: "E-Commerce Website",
-    image: project1,
+    title: "Todo-Pro..!!",
+    image: project2,
+    url: TODO_PRO_URL,
+    description:
+      "Todo App: An application for managing todos collaboratively, with features such as task creation, assignment, and progress tracking like sprint board.",
+    technologies: ["React", "Node", "MongoDB", "Express", "Socket.io", "Tailwind", "AG-Grid"],
+  },
+  {
+    title: "Social Media App",
+    url: SOCIALLY_CLONE_URL,
+    image: socially,
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+    technologies: ["Next.js", "Typescript", "Tailwind", "prisma", "Shadcn-UI", "clerk"],
   },
   {
     title: "Netflix-clone",
@@ -57,22 +75,7 @@ export const PROJECTS = [
     image: Xclone,
     description:
       "This is just a clone of an OTT platform Netflix with MERN stack and Tailwind CSS",
-    technologies: ["React", "Node", "MongoDB", "Express", "Tailwind"],
-  },
-  {
-    title: "Task Management App",
-    image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["React", "Node", "MongoDB", "Express"],
-  },
-  {
-    title: "Personal Portfolio",
-    url: WEBSITE_URL,
-    image: portfolio,
-    description:
-      "Built a personal portfolio website that you're currently going through with React & Tailwind.",
-    technologies: ["React", "Tailwind","HTML", "CSS"],
+    technologies: ["React", "Node", "MongoDB", "Express", "Tailwind", "DaisyUI"],
   },
 ];
 
