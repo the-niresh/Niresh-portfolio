@@ -58,15 +58,14 @@ export const PROJECTS = [
     url: SOCIALLY_CLONE_URL,
     image: socially,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+      "A fully functional social media website with features like product listing, shopping cart, and user authentication.",
     technologies: ["Next.js", "Typescript", "Tailwind", "prisma", "Shadcn-UI", "clerk"],
   },
   {
     title: "Netflix-clone",
     url: NETFLIX_CLONE_URL,
     image: Netflix,
-    description:
-      "This is just a clone of X formerly known as Twitter with MERN stack and Tailwind CSS",
+    description:"This is just a clone of an OTT platform Netflix with MERN stack and Tailwind CSS",
     technologies: ["React", "Node", "MongoDB", "Express", "Tailwind"],
   },
   {
@@ -74,7 +73,7 @@ export const PROJECTS = [
     url: PROJECT_1_URL,
     image: Xclone,
     description:
-      "This is just a clone of an OTT platform Netflix with MERN stack and Tailwind CSS",
+      "This is just a clone of X formerly known as Twitter with MERN stack and Tailwind CSS",
     technologies: ["React", "Node", "MongoDB", "Express", "Tailwind", "DaisyUI"],
   },
 ];
