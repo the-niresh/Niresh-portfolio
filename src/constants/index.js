@@ -1,5 +1,7 @@
 import socially from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
+import aitodopro from "../assets/projects/aitodopro.png";
+import wiseadvicesai from "../assets/projects/wiseadvicesai.jpg";
 import Xclone from "../assets/projects/X-clone.png";
 import Netflix from "../assets/projects/Netflix.png";
 
@@ -14,10 +16,15 @@ export const PROJECT_1_URL = "https://nire-twitter-clone.onrender.com/"
 export const NETFLIX_CLONE_URL = "https://netflix-clone-kqqz.onrender.com/"
 export const SOCIALLY_CLONE_URL = "https://nextjs-socially-one.vercel.app/"
 export const TODO_PRO_URL = "https://todo-render-ooo8.onrender.com/"
+export const AI_TODO_PRO_URL = "https://todo-pro-iota.vercel.app/"
+export const WISEADVICES_AI_URL = "https://wiseadvices-ai.vercel.app/"
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 3 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, RestAPI, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT_1 = `I am a full stack developer with a knack for crafting robust and scalable web applications. With 3 years of hands-on industrial experience, I have honed my skills in front-end technologies like React, Next.js & Tailwind-CSS, as well as back-end technologies like Node.js, RestAPI's, PostgreSQL, and MongoDB.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 3 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, RestAPI, PostgreSQL, and MongoDB. I have also worked with other few technologies like Tailwind, Redis, Bootstrap Cypress, Docker, AWS, & Concourse. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, learning new stuffs & SuDoKu.`;
+export const HERO_CONTENT_2 = ` In recent times,I've been exploring AI technologies and integrating them into web applications to enhance user interactions and automate complex processes. I gained experie in Vector Database, and automation tools.`
+export const HERO_CONTENT_3 = ` My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`
+
+export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 3 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, TailwindCSS, RestAPI, PostgreSQL, and MongoDB. I have also worked with other few technologies like Tailwind, Redis, Bootstrap Cypress, Docker, AWS, & Concourse. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, learning new stuffs & SuDoKu.`;
 
 export const EXPERIENCES = [
   {
@@ -45,6 +52,22 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
 
+  {
+    title: "AI-Todo-Pro",
+    image: aitodopro,
+    url: AI_TODO_PRO_URL,
+    description:
+      "AI Powered Todo list app that allows users to create, manage, and organize tasks collaboratively. It utilizes AI to suggest ideas to fragment the todo list based on user input and provides real-time updates on task progress.",
+    technologies: ["Next.js", "Supabase", "OpenAi-API", "OAuth", "GCP", "Tailwind", "Shadcn-UI"],
+  },
+  {
+    title: "WiseAdvices-AI",
+    image: wiseadvicesai,
+    url: WISEADVICES_AI_URL,
+    description:
+      "AI Powered App, Advices you with the best possible way and best practices on respective topics.",
+    technologies: ["Next.js", "Supabase", "Clerk", "OpenAi-API", "Anthropic-API", "Tailwind", "Shadcn-UI"],
+  },
   {
     title: "Todo-Pro..!!",
     image: project2,
@@ -81,5 +104,5 @@ export const PROJECTS = [
 export const CONTACT = {
   address: "12/155-1, Mohan Nagar, Salem-30",
   phoneNo: "+91 9488186900",
-  email: "nireshine@gmail.com",
+  email: "niresh@yeahscene.com",
 };

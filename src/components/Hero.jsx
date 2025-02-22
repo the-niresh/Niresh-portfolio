@@ -1,4 +1,4 @@
-import { NAME, HERO_CONTENT } from "../constants"
+import { NAME, HERO_CONTENT_1, HERO_CONTENT_2,HERO_CONTENT_3 } from "../constants"
 import profilePic from "../assets/NireshProfile.png"
 import { motion } from "framer-motion"
 
@@ -26,14 +26,28 @@ const Hero = () => {
                             initial="hidden"
                             animate="visible"
                             className="bg-gradient-to-r from-pink-300 via-slate-100 to-purple-500 bg-clip-text text-3xl tracking-tighter text-transparent">
-                            Full Stack Developer
+                            AI-Full Stack Developer
                         </motion.span>
                         <motion.p
                             variants={container(1)}
                             initial="hidden"
                             animate="visible"
-                            className="my-2 max-w-xl py-6 font-light tracking-tighter">
-                            {HERO_CONTENT}
+                            className="my-2 max-w-xl py-3 font-light tracking-tighter">
+                            {HERO_CONTENT_1}
+                        </motion.p>
+                        <motion.p
+                            variants={container(1)}
+                            initial="hidden"
+                            animate="visible"
+                            className="my-2 max-w-xl py-3 font-light tracking-tighter">
+                            {HERO_CONTENT_2}
+                        </motion.p>
+                        <motion.p
+                            variants={container(1)}
+                            initial="hidden"
+                            animate="visible"
+                            className="my-2 max-w-xl py-3 font-light tracking-tighter">
+                            {HERO_CONTENT_3}
                         </motion.p>
                     </div>
                 </div>
