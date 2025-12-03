@@ -19,12 +19,18 @@ export const TODO_PRO_URL = "https://todo-render-ooo8.onrender.com/"
 export const AI_TODO_PRO_URL = "https://todo-pro-iota.vercel.app/"
 export const WISEADVICES_AI_URL = "https://wiseadvices-ai.vercel.app/"
 
-export const HERO_CONTENT_1 = `I am a full stack developer with a knack for crafting robust and scalable web applications. With 3 years of hands-on industrial experience, I have honed my skills in front-end technologies like React, Next.js & Tailwind-CSS, as well as back-end technologies like Node.js, RestAPI's, PostgreSQL, and MongoDB.`;
+// export const HERO_CONTENT_1 = `I am a full stack developer with a knack for crafting robust and scalable web applications. With 3 years of hands-on industrial experience, I have honed my skills in front-end technologies like React, Next.js & Tailwind-CSS, as well as back-end technologies like Node.js, RestAPI's, PostgreSQL, and MongoDB.`;
 
-export const HERO_CONTENT_2 = ` In recent times,I've been exploring AI technologies and integrating them into web applications to enhance user interactions and automate complex processes. I gained experie in Vector Database, and automation tools.`
-export const HERO_CONTENT_3 = ` My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`
+// export const HERO_CONTENT_2 = ` In recent times,I've been exploring AI technologies and integrating them into web applications to enhance user interactions and automate complex processes. I gained experie in Vector Database, and automation tools.`
+// export const HERO_CONTENT_3 = ` My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 3 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, TailwindCSS, RestAPI, PostgreSQL, and MongoDB. I have also worked with other few technologies like Tailwind, Redis, Bootstrap Cypress, Docker, AWS, & Concourse. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, learning new stuffs & SuDoKu.`;
+export const HERO_CONTENT_1 = `I'm an AI-focused full stack developer with experience in the IT industry and multiple end-to-end freelance projects delivered independently. I build scalable web applications using React, Next.js, Tailwind, Node.js, Convex, PostgreSQL, and MongoDB.`;
+
+export const HERO_CONTENT_2 = `Recently, my work has centered on AI product development and automation — integrating LLMs, building intelligent features, working with vector databases, and creating workflow automations using tools like n8n.`;
+
+export const HERO_CONTENT_3 = `My focus is on building practical, high-impact solutions that automate operations, enhance user experience, and help businesses move faster with AI.`;  
+
+export const ABOUT_TEXT = `I am a full stack developer with a passion for creating efficient and user-friendly web applications. With 3 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, n8n, TailwindCSS, RestAPI, Convex, PostgreSQL, and MongoDB. I have also worked with other few technologies like Tailwind, Redis, Bootstrap Cypress, Docker, AWS, & Concourse. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, learning new stuffs & SuDoKu.`;
 
 export const EXPERIENCES = [
   {
