@@ -4,7 +4,8 @@ import { FaGithub } from "react-icons/fa"
 import { FaSquareXTwitter } from "react-icons/fa6"
 import { FaInstagram } from "react-icons/fa"
 import { LiaFileDownloadSolid } from "react-icons/lia";
-import { WEBSITE_URL, LINKEDIN_URL, GITHUB_URL, INSTAGRAM_URL, TWITTER_URL, CV_URL } from "../constants"
+import { BsWhatsapp } from "react-icons/bs";
+import { WEBSITE_URL, LINKEDIN_URL, GITHUB_URL, INSTAGRAM_URL, TWITTER_URL, WHATSAPP_URL, CV_URL } from "../constants"
 
 const Navbar = () => {
   return (
@@ -17,6 +18,7 @@ const Navbar = () => {
         <a href={GITHUB_URL} target="_blank"><FaGithub /></a>
         <a href={INSTAGRAM_URL} target="_blank"><FaInstagram /></a>
         <a href={TWITTER_URL} target="_blank"><FaSquareXTwitter /></a>
+        <a href={WHATSAPP_URL} target="_blank"><BsWhatsapp /></a>
         <a href={CV_URL} target="_blank"><LiaFileDownloadSolid /></a>
       </div>
     </nav>

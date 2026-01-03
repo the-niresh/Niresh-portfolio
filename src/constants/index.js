@@ -11,7 +11,9 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/the-niresh/"
 export const GITHUB_URL = "https://github.com/the-niresh"
 export const INSTAGRAM_URL = "https://www.instagram.com/the_niresh/"
 export const TWITTER_URL = "https://x.com/the_niresh"
+export const WHATSAPP_URL = "https://wa.me/+919488186900"
 export const CV_URL = "https://drive.google.com/file/d/1KsB9mBeA8Zr_33fVSMbS6Ie_y4X-_G7s/view?usp=drive_link"
+
 export const PROJECT_1_URL = "https://nire-twitter-clone.onrender.com/"
 export const NETFLIX_CLONE_URL = "https://netflix-clone-kqqz.onrender.com/"
 export const SOCIALLY_CLONE_URL = "https://nextjs-socially-one.vercel.app/"
@@ -30,7 +32,7 @@ export const HERO_CONTENT_2 = `Recently, my work has centered on AI product deve
 
 export const HERO_CONTENT_3 = `My focus is on building practical, high-impact solutions that automate operations, enhance user experience, and help businesses move faster with AI.`;  
 
-export const ABOUT_TEXT = `I am a full stack developer with a passion for creating efficient and user-friendly web applications. With 3 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, n8n, TailwindCSS, RestAPI, Convex, n8n, PostgreSQL, and MongoDB. I have also worked with other few technologies like Tailwind, Redis, Bootstrap Cypress, Docker, AWS, & Concourse. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, learning new stuffs & SuDoKu.`;
+export const ABOUT_TEXT = `I am a full stack developer with a passion for creating efficient and user-friendly AI web applications. With 3 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, n8n, TailwindCSS, RestAPI, Convex, n8n, PostgreSQL, and MongoDB. I have also worked with other few technologies like Tailwind, Redis, Bootstrap Cypress, Docker, AWS, & Concourse. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, learning new stuffs & SuDoKu.`;
 
 export const EXPERIENCES = [
   {
