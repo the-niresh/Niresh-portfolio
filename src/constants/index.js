@@ -1,9 +1,9 @@
-import socially from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import aitodopro from "../assets/projects/aitodopro.png";
 import wiseadvicesai from "../assets/projects/wiseadvicesai.jpg";
-import Xclone from "../assets/projects/X-clone.png";
-import Netflix from "../assets/projects/Netflix.png";
+import autonerds from "../assets/projects/autonerds.png";
+import foodspector from "../assets/projects/foodspector.png";
+import chemlaxx from "../assets/projects/chemlaxx.png";
 
 export const NAME = "Niresh"
 export const WEBSITE_URL = "https://niresh.in/"
@@ -12,100 +12,100 @@ export const GITHUB_URL = "https://github.com/the-niresh"
 export const INSTAGRAM_URL = "https://www.instagram.com/the_niresh/"
 export const TWITTER_URL = "https://x.com/the_niresh"
 export const WHATSAPP_URL = "https://wa.me/+919488186900"
-export const CV_URL = "https://drive.google.com/file/d/1KsB9mBeA8Zr_33fVSMbS6Ie_y4X-_G7s/view?usp=drive_link"
+export const CV_URL = "https://drive.google.com/file/d/YOUR_AI_CV_PDF_ID/view?usp=drive_link" // Upload Nire-AA-CV.pdf and replace ID
 
-export const PROJECT_1_URL = "https://nire-twitter-clone.onrender.com/"
-export const NETFLIX_CLONE_URL = "https://netflix-clone-kqqz.onrender.com/"
-export const SOCIALLY_CLONE_URL = "https://nextjs-socially-one.vercel.app/"
 export const TODO_PRO_URL = "https://todo-render-ooo8.onrender.com/"
 export const AI_TODO_PRO_URL = "https://todo-pro-iota.vercel.app/"
 export const WISEADVICES_AI_URL = "https://wiseadvices-ai.vercel.app/"
+// New project URLs
+export const AUTONERDS_URL = "https://autonerds-ai.vercel.app"
+export const FOODSPECTOR_URL = "https://foodspector.vercel.app"
+export const CHEMLAX_URL = "https://chem-laxx.vercel.app"
 
-// export const HERO_CONTENT_1 = `I am a full stack developer with a knack for crafting robust and scalable web applications. With 3 years of hands-on industrial experience, I have honed my skills in front-end technologies like React, Next.js & Tailwind-CSS, as well as back-end technologies like Node.js, RestAPI's, PostgreSQL, and MongoDB.`;
+export const HERO_CONTENT_1 = `AI Automation Engineer and Full Stack Developer specializing in APIs, LLMs, and n8n workflows. Hands-on with production-grade automations for real business processes.`;
 
-// export const HERO_CONTENT_2 = ` In recent times,I've been exploring AI technologies and integrating them into web applications to enhance user interactions and automate complex processes. I gained experie in Vector Database, and automation tools.`
-// export const HERO_CONTENT_3 = ` My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`
+export const HERO_CONTENT_2 = `Build scalable apps with React, Next.js, Node.js, Convex, PostgreSQL, Supabase; integrate AI for efficiency via n8n workflows, error handling, third-party APIs.`;
 
-export const HERO_CONTENT_1 = `I'm an AI-focused full stack developer with experience in the IT industry and multiple end-to-end freelance projects delivered independently. I build scalable web applications using React, Next.js, Tailwind, Node.js, Convex, PostgreSQL, and MongoDB.`;
+export const HERO_CONTENT_3 = `Deliver high-impact solutions: automate operations, enhance decisions, reduce manual work by 30-40% in freelance projects for food auditing and chemicals.`;
 
-export const HERO_CONTENT_2 = `Recently, my work has centered on AI product development and automation — integrating LLMs, building intelligent features, working with vector databases, and creating workflow automations using tools like n8n.`;
+export const ABOUT_TEXT = `AI Automation Engineer with expertise in production-grade n8n workflows, API-driven automations, and AI systems. Full-stack skills: React.js/Next.js frontend, Node.js/Express.js backend, databases (MongoDB, PostgreSQL, Supabase, Convex), tools (Redis, Docker, AWS, Cypress). Focus on reliability—edge cases, failures, retries. Track record: fixed 250+ bugs, optimized for 15k+ datasets, open-sourced 80% of product, delivered freelance apps solving real processes. Own problems end-to-end in collaborative environments.`;
+export const ABOUT_TECHNOLOGIES = ["n8n", "React", "Node.js", "Next.js", "Convex", "Supabase", "Neon", "MongoDB", "Mongoose", "PostgreSQL", "Express.js", "TypeScript", "Redux", "Redis", "Socket.io", "Shadcn-UI", "Clerk", "OAuth", "Webhooks", "Make.com", "Zapier", "OpenAI", "Anthropic", "LLMs", "Chatbots", "AWS", "Google Cloud", "Docker", "CI/CD", "Jenkins", "Concourse", "Kafka", "Cypress", "Cucumber", "Puppeteer", "Lightning.js", "Postman", "Stripe", "Slack", "ClickUp", "Zoho", "Typeform", "S3", "Lambda", "EC2", "CloudWatch", "AG-Grid"];
 
-export const HERO_CONTENT_3 = `My focus is on building practical, high-impact solutions that automate operations, enhance user experience, and help businesses move faster with AI.`;  
-
-export const ABOUT_TEXT = `I am a full stack developer with a passion for creating efficient and user-friendly AI web applications. With 3 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, n8n, TailwindCSS, RestAPI, Convex, n8n, PostgreSQL, and MongoDB. I have also worked with other few technologies like Tailwind, Redis, Bootstrap Cypress, Docker, AWS, & Concourse. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, learning new stuffs & SuDoKu.`;
+export const SKILLS = {
+  automation_ai: ["n8n (complex workflows, webhooks, error handling, retries)", "LLM integrations (OpenAI, streaming, guardrails)", "AI chatbots for operational workflows", "Secure webhook-based systems"],
+  backend_data: ["REST APIs, third-party integrations", "JavaScript (advanced data transformations)", "Convex, Postgres/SQL, Supabase", "Authentication & permissions design"],
+  tools_platforms: ["Zoho, ClickUp, Slack, Stripe, Typeform (integrations)", "Git, Postman", "Node.js, Next.js (for automation services)"],
+  frontend: ["React.js, JavaScript, Typescript, HTML, CSS, Tailwind, Redux, Next.js"],
+  backend: ["Node.js, Express.js, Restful APIs, MongoDB, PostgreSQL"],
+  other: ["AWS, Docker, Redis, Kafka, CI/CD, Jenkins, Concourse", "Testing & Automation: Cypress, Cucumber, Glue", "Agile Methodologies, Responsive Design, Git, Cross-Browser Compatibility"]
+};
 
 export const EXPERIENCES = [
   {
     year: "2023 - 2024",
-    role: "Senior Software Developer",
+    role: "Senior Engineer",
     company: "TATA ELXSI",
-    description: `Designed and developed the Employee History & Status Portal using React, Node, MongoDB, Express, and Redis. Engineered a responsive UI with advanced features leveraging React libraries for comprehensive analysis on over 15k datasets.`,
-    technologies: ["React", "Node", "MongoDB", "Express", "Redis", "Bootstrap"],
+    description: `Designed Employee History & Status Portal using React, Node.js, MongoDB, Express.js, Redis:\n- Responsive UI for 15k+ datasets, integrated REST APIs.\n- Reduced response times via Redis caching; exceeded benchmarks.\n- Fixed backend bugs, mentored juniors.\nContributed to open-sourcing TV-OTT tool: Node.js/Express.js, Lightning.js, Cypress; open-sourced 80%.`,
+    technologies: ["React", "Node.js", "MongoDB", "Express.js", "Redis", "REST APIs", "Lightning.js", "Cypress", "CI/CD"],
   },
   {
     year: "2021 - 2023",
-    role: "Software Developer",
+    role: "Engineer",
     company: "TATA ELXSI",
-    description: `Contributed in developing an all JavaScript-based automation tool that certifies OTT apps on TV based on API implementation and integration using Node.js/Express.js in Backend and Lightning.js in Frontend. Automated testing processes using Cypress. Fixed over 250+ software bugs and optimized backend logic in Node.js and Lightning.js systems.`,
-    technologies: ["Node", "Express","Lightning.js", "Cypress", "RestAPI"],
+    description: `Developed OTT certification tool using Node.js/Express.js, Lightning.js, Cypress/Cucumber:\n- Automated APIs, fixed 250+ bugs, optimized boot-up by 30s.\n- Extended tests to 40+ features (30% contribution).\n- Improved load times beyond thresholds.`,
+    technologies: ["Node.js", "Express.js", "Lightning.js", "Cypress", "REST APIs", "CI/CD", "Cucumber"],
   },
   {
-    year: "2021 - 2021",
+    year: "2021",
     role: "Software Developer - Intern",
     company: "Sandeza Inc.",
-    description: `Worked on AWS to build voice agents for businesses using Node.js/Express.js in the backend as a Trainee. Trained on Node.js and AWS services like S3, Lambda, EC2, and CloudWatch.`,
-    technologies: ["Node", "Express","AWS", "S3", "EC2", "Lambda", "CloudWatch"],
+    description: `Built voice agents on AWS with Node.js/Express.js:\n- Trained on S3, Lambda, EC2, CloudWatch.`,
+    technologies: ["Node.js", "Express.js", "AWS", "S3", "Lambda", "EC2", "CloudWatch"],
   },
 ];
 
 export const PROJECTS = [
-
+  {
+    title: "Universal Automation-Connected Chatbot",
+    image: autonerds,
+    url: AUTONERDS_URL,
+    description: "Universal chatbot connecting to n8n/Zapier/Make.com workflows via secure webhooks.\n- Solves redundant rebuilding for agencies: single interface reusable across clients.\n- Reduces dev time 35%, revenue boost 30%, 40% faster AI delivery.\n- Focuses on logic over UI.",
+    technologies: ["Next.js", "n8n", "Webhooks", "AI Integrations", "Supabase/Clerk"],
+  },
+  {
+    title: "FoodSpector: Food Auditing WebApp",
+    image: foodspector,
+    url: FOODSPECTOR_URL,
+    description: "App for freelance inspectors managing audits, replacing paper/WhatsApp.\n- Checklists with photos/notes, offline, auto-scoring, tamper-proof PDFs, dashboards.\n- FSSAI/HACCP compliant; 40+ auditors in TN/Karnataka.\n- Prioritizes correctness, reduces disputes.",
+    technologies: ["React/Next.js", "Node.js", "Supabase/PostgreSQL", "n8n", "Puppeteer"],
+  },
+  {
+    title: "Chemical Industry AI Decision Chatbot",
+    image: chemlaxx,
+    url: CHEMLAX_URL,
+    description: "AI chatbot for chemical selection based on constraints (budget, quantity, environment).\n- Recommends solutions, reduces trial-error, ensures consistency.\n- Streaming responses, structured reasoning, guardrails for high-impact decisions.",
+    technologies: ["Next.js", "OpenAI/Anthropic APIs", "Supabase", "Tailwind", "Shadcn-UI"],
+  },
   {
     title: "AI-Todo-Pro",
     image: aitodopro,
     url: AI_TODO_PRO_URL,
-    description:
-      "AI Powered Todo list app that allows users to create, manage, and organize tasks collaboratively. It utilizes AI to suggest ideas to fragment the todo list based on user input and provides real-time updates on task progress.",
-    technologies: ["Next.js", "Supabase", "OpenAi-API", "OAuth", "GCP", "Tailwind", "Shadcn-UI"],
+    description: "AI todo app for collaborative tasks.\n- AI suggests fragmentation; real-time updates.",
+    technologies: ["Next.js", "Supabase", "OpenAI-API", "OAuth", "GCP", "Tailwind", "Shadcn-UI"],
   },
   {
     title: "WiseAdvices-AI",
     image: wiseadvicesai,
     url: WISEADVICES_AI_URL,
-    description:
-      "AI Powered App, Advices you with the best possible way and best practices on respective topics.",
-    technologies: ["Next.js", "Supabase", "Clerk", "OpenAi-API", "Anthropic-API", "Tailwind", "Shadcn-UI"],
+    description: "AI advice app on best practices.",
+    technologies: ["Next.js", "Supabase", "Clerk", "OpenAI-API", "Anthropic-API", "Tailwind", "Shadcn-UI"],
   },
   {
     title: "Todo-Pro..!!",
     image: project2,
     url: TODO_PRO_URL,
-    description:
-      "Todo App: An application for managing todos collaboratively, with features such as task creation, assignment, and progress tracking like sprint board.",
+    description: "Collaborative todo with sprint tracking.",
     technologies: ["React", "Node", "MongoDB", "Express", "Socket.io", "Tailwind", "AG-Grid"],
-  },
-  {
-    title: "Social Media App",
-    url: SOCIALLY_CLONE_URL,
-    image: socially,
-    description:
-      "A fully functional social media website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["Next.js", "Typescript", "Tailwind", "prisma", "Shadcn-UI", "clerk"],
-  },
-  {
-    title: "Netflix-clone",
-    url: NETFLIX_CLONE_URL,
-    image: Netflix,
-    description:"This is just a clone of an OTT platform Netflix with MERN stack and Tailwind CSS",
-    technologies: ["React", "Node", "MongoDB", "Express", "Tailwind"],
-  },
-  {
-    title: "Twitter(X)-clone",
-    url: PROJECT_1_URL,
-    image: Xclone,
-    description:
-      "This is just a clone of X formerly known as Twitter with MERN stack and Tailwind CSS",
-    technologies: ["React", "Node", "MongoDB", "Express", "Tailwind", "DaisyUI"],
   },
 ];
 

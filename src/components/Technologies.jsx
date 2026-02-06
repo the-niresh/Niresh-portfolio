@@ -3,11 +3,13 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { SiMongodb } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
+import { RiSupabaseFill } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiExpress } from "react-icons/si";
 import { TbBrandCypress } from "react-icons/tb";
 import { motion } from "framer-motion"
+import convexLogo from "../assets/projects/convex.png";
 
 const iconVariants = (duration) => ({
     initial: { y: -10 },
@@ -54,14 +56,27 @@ const Technologies = () => {
                     initial="initial"
                     animate="animate"
                     className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <SiMongodb className="text-7xl text-green-500" />
+                    <RiTailwindCssFill className="text-7xl text-blue-500" />
                 </motion.div>
                 <motion.div
                     variants={iconVariants(1)}
                     initial="initial"
                     animate="animate"
                     className="rounded-2xl border-4 border-neutral-800 p-4">
-                    <RiTailwindCssFill className="text-7xl text-blue-500" />
+                    <img src={convexLogo} alt="Convex" className="h-16 w-16 object-contain" />
+                </motion.div>
+                <motion.div
+                    variants={iconVariants(1.7)}
+                    initial="initial"
+                    animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
+                    <RiSupabaseFill className="text-7xl text-emerald-500" />
+                </motion.div>
+                <motion.div
+                    variants={iconVariants(1)}
+                    initial="initial"
+                    animate="animate"
+                    className="rounded-2xl border-4 border-neutral-800 p-4">
+                    <SiMongodb className="text-7xl text-green-500" />
                 </motion.div>
                 <motion.div
                     variants={iconVariants(0)}

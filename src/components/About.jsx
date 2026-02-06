@@ -1,10 +1,10 @@
 import aboutImg from '../assets/about.jpg'
-import { ABOUT_TEXT } from '../constants'
+import { ABOUT_TECHNOLOGIES, ABOUT_TEXT } from '../constants'
 import { motion } from "framer-motion"
 
 const About = () => {
     return (
-        <div className="border-b border-neutral-900 pb-4 ">
+        <div className="border-b border-neutral-900 pb-8 ">
             <h2 className="my-20 text-center text-4xl">About
                 <span className="text-neutral-500 "> Me</span>
             </h2>
@@ -27,6 +27,12 @@ const About = () => {
                         <div className="flex justify-center lg:justify-start ">
                             <p className="my-2 max-w-xl py-6">{ABOUT_TEXT}</p>
                         </div>
+                        <h6 className="mb-2 text-center font-semibold lg:text-left">Skills</h6>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                                {ABOUT_TECHNOLOGIES.map((tech, index) => (
+                                    <span key={index} className="max-w-full break-words rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-green-300">{tech}</span>
+                                ))}
+                            </div>
                     </motion.div>
             </div>
         </div>
