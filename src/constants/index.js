@@ -12,7 +12,7 @@ export const GITHUB_URL = "https://github.com/the-niresh"
 export const INSTAGRAM_URL = "https://www.instagram.com/the_niresh/"
 export const TWITTER_URL = "https://x.com/the_niresh"
 export const WHATSAPP_URL = "https://wa.me/+919488186900"
-export const CV_URL = "https://drive.google.com/file/d/YOUR_AI_CV_PDF_ID/view?usp=drive_link" // Upload Nire-AA-CV.pdf and replace ID
+export const CV_URL = "https://drive.google.com/file/d/1Fux0I_RjHHCyumTS6KjX-aPrMoWLuPav/view?usp=sharing" // Upload Nire-AA-CV.pdf and replace ID
 
 export const TODO_PRO_URL = "https://todo-render-ooo8.onrender.com/"
 export const AI_TODO_PRO_URL = "https://todo-pro-iota.vercel.app/"
