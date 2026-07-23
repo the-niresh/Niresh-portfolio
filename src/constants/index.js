@@ -1,9 +1,7 @@
-import project2 from "../assets/projects/project-2.jpg";
-import aitodopro from "../assets/projects/aitodopro.png";
-import wiseadvicesai from "../assets/projects/wiseadvicesai.jpg";
 import autonerds from "../assets/projects/autonerds.png";
 import foodspector from "../assets/projects/foodspector.png";
 import chemlaxx from "../assets/projects/chemlaxx.png";
+import alientrade from "../assets/projects/alientrade.png";
 
 export const NAME = "Niresh"
 export const WEBSITE_URL = "https://niresh.in/"
@@ -14,33 +12,37 @@ export const TWITTER_URL = "https://x.com/the_niresh"
 export const WHATSAPP_URL = "https://wa.me/+919488186900"
 export const CV_URL = "https://drive.google.com/file/d/1Fux0I_RjHHCyumTS6KjX-aPrMoWLuPav/view?usp=sharing" // Upload Nire-AA-CV.pdf and replace ID
 
-export const TODO_PRO_URL = "https://todo-render-ooo8.onrender.com/"
-export const AI_TODO_PRO_URL = "https://todo-pro-iota.vercel.app/"
-export const WISEADVICES_AI_URL = "https://wiseadvices-ai.vercel.app/"
-// New project URLs
 export const AUTONERDS_URL = "https://autonerds-ai.vercel.app"
-export const FOODSPECTOR_URL = "https://foodspector.vercel.app"
+export const FOODSPECTOR_URL = "https://foodspector.pro"       // TODO: confirm the production domain is live
+export const ALIEN_TRADE_URL = GITHUB_URL                       // TODO: replace with the Alien-Trade demo/repo URL
 export const CHEMLAX_URL = "https://chem-laxx.vercel.app"
 
-export const HERO_CONTENT_1 = `AI Automation Engineer and Full Stack Developer specializing in APIs, LLMs, and n8n workflows. Hands-on with production-grade automations for real business processes.`;
+// Engineer-first positioning (2026-07-24). Real work only — no fabricated claims.
+export const HERO_CONTENT_1 = `Full-stack & AI systems engineer. I build production systems end to end — a multi-tenant SaaS, autonomous agents, and the infrastructure behind them. Ex-Tata Elxsi.`;
 
-export const HERO_CONTENT_2 = `Build scalable apps with React, Next.js, Node.js, Convex, PostgreSQL, Supabase; integrate AI for efficiency via n8n workflows, error handling, third-party APIs.`;
+export const HERO_CONTENT_2 = `Ship with React, Next.js, Node.js, Convex, PostgreSQL on Cloudflare and AWS — and the parts that actually matter in production: auth, tenant isolation, data integrity, background jobs, tests, and cost control.`;
 
-export const HERO_CONTENT_3 = `Deliver high-impact solutions: automate operations, enhance decisions, reduce manual work by 30-40% in freelance projects for food auditing and chemicals.`;
+export const HERO_CONTENT_3 = `Currently building FoodSpector — a multi-tenant food-compliance platform — and autonomous developer tooling for shipping software with AI agents.`;
 
-export const ABOUT_TEXT = `AI Automation Engineer with expertise in production-grade n8n workflows, API-driven automations, and AI systems. Full-stack skills: React.js/Next.js frontend, Node.js/Express.js backend, databases (MongoDB, PostgreSQL, Supabase, Convex), tools (Redis, Docker, AWS, Cypress). Focus on reliability-edge cases, failures, retries. Track record: fixed 250+ bugs, optimized for 15k+ datasets, open-sourced 80% of product, delivered freelance apps solving real processes. Own problems end-to-end in collaborative environments.`;
-export const ABOUT_TECHNOLOGIES = [ "React", "Node.js", "Next.js", "Convex", "n8n", "Supabase", "Neon", "MongoDB", "Mongoose", "PostgreSQL", "Prisma", "Express.js", "Redux", "Redis", "Socket.io", "Shadcn-UI", "Clerk", "OAuth", "Webhooks", "Make.com", "Grok", "OpenAI", "Anthropic", "LLMs", "Chatbots", "AWS", "Google Cloud", "Docker", "CI/CD", "Jenkins", "Concourse", "Kafka", "Cypress", "Cucumber", "Puppeteer", "Lightning.js", "Stripe", "Slack", "ClickUp", "Zoho", "Typeform", "Airtable", "JotForm", "Notion", "Tally.so", "S3", "Lambda", "EC2", "CloudWatch", "AG-Grid"];
+export const ABOUT_TEXT = `Full-stack and AI systems engineer. I build production systems end to end — frontend (React / Next.js), backend (Node.js / Convex / Postgres), and the infrastructure around them (auth, background jobs, object storage, tests, CI/CD). Comfortable with the hard parts most demos skip: multi-tenant isolation, data integrity, retries, and edge cases. Previously a Senior Engineer at Tata Elxsi — fixed 250+ bugs, built UIs over 15k+ record datasets, and helped open-source 80% of a product. Now building FoodSpector (a multi-tenant compliance platform) and autonomous/AI tooling on the side. I own problems end to end.`;
+
+export const ABOUT_TECHNOLOGIES = ["React", "Next.js", "TypeScript", "Node.js", "Express.js", "Convex", "PostgreSQL", "Supabase", "Neon", "MongoDB", "Prisma", "Redis", "Cloudflare Workers", "R2", "Docker", "AWS", "CI/CD", "n8n", "OpenAI", "Anthropic", "LLMs", "Playwright", "Cypress", "Socket.io", "Shadcn-UI", "Tailwind", "OAuth", "Webhooks", "Stripe", "Kafka"];
 
 export const SKILLS = {
-  automation_ai: ["n8n (complex workflows, webhooks, error handling, retries)", "LLM integrations (OpenAI, streaming, guardrails)", "AI chatbots for operational workflows", "Secure webhook-based systems"],
-  backend_data: ["REST APIs, third-party integrations", "JavaScript (advanced data transformations)", "Convex, Postgres/SQL, Supabase", "Authentication & permissions design"],
-  tools_platforms: ["Zoho, ClickUp, Slack, Stripe, Typeform (integrations)", "Git, Postman", "Node.js, Next.js (for automation services)"],
-  frontend: ["React.js, JavaScript, Typescript, HTML, CSS, Tailwind, Redux, Next.js"],
-  backend: ["Node.js, Express.js, Restful APIs, MongoDB, PostgreSQL"],
-  other: ["AWS, Docker, Redis, Kafka, CI/CD, Jenkins, Concourse", "Testing & Automation: Cypress, Cucumber, Glue", "Agile Methodologies, Responsive Design, Git, Cross-Browser Compatibility"]
+  systems_ai: ["Multi-tenant architecture & authorization design", "LLM integrations (OpenAI/Anthropic, streaming, guardrails)", "Autonomous agents & background job pipelines", "Secure webhook-based systems"],
+  backend_data: ["REST APIs, third-party integrations", "JavaScript/TypeScript (advanced data transformations)", "Convex, Postgres/SQL, Supabase", "Authentication, permissions & tenant isolation"],
+  frontend: ["React.js, Next.js, TypeScript, Tailwind, Redux, Shadcn-UI"],
+  infra_testing: ["Cloudflare Workers/R2, AWS, Docker, Redis, Kafka, CI/CD", "Playwright, Cypress, Cucumber", "Responsive design, cross-browser, Git"],
 };
 
 export const EXPERIENCES = [
+  {
+    year: "2024 - Present",
+    role: "Founding Engineer",
+    company: "FoodSpector · YeahScene",
+    description: `Building FoodSpector, a multi-tenant food-compliance SaaS, end to end:\n- One Convex backend enforcing three separate authorization models (store membership, record ownership, engagement-scoped third-party audits) with tenant isolation.\n- Auto-generated compliance PDF reports via a Cloudflare Workers + R2 + queue pipeline.\n- 450+ backend tests guarding data integrity; immutable, tamper-evident audit records.`,
+    technologies: ["Next.js", "React", "TypeScript", "Convex", "Cloudflare Workers", "R2", "Tailwind", "Playwright", "LLMs"],
+  },
   {
     year: "2023 - 2024",
     role: "Senior Engineer",
@@ -66,51 +68,37 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "FoodSpector — Multi-tenant Food-Compliance SaaS",
+    image: foodspector,
+    url: FOODSPECTOR_URL,
+    description: "A multi-tenant compliance platform for the food industry — audits, checklists, and immutable records.\n- One Convex backend enforcing three separate authorization models with strict tenant isolation.\n- Auto-generated PDF reports via a Cloudflare Workers + R2 + queue pipeline.\n- 450+ backend tests; tamper-evident records (corrections make a new version, never a silent edit).",
+    technologies: ["Next.js", "React", "TypeScript", "Convex", "Cloudflare Workers", "R2", "Tailwind", "Playwright", "LLMs"],
+  },
+  {
+    title: "Alien-Trade — Autonomous Trading Agent",
+    image: alientrade,
+    url: ALIEN_TRADE_URL,
+    description: "An autonomous crypto-trading agent (BNB Hack 2026).\n- Deterministic Python decision core, Convex real-time state bus, and a cockpit PWA.\n- Drawdown-first discipline: validated honestly — including recording when flat cash beat the live strategy.\n- Built for reliability and ops rigor over hype.",
+    technologies: ["Python", "Convex", "PWA", "BNB Chain", "Real-time", "Testing"],
+  },
+  {
     title: "Universal Automation-Connected Chatbot",
     image: autonerds,
     url: AUTONERDS_URL,
-    description: "Universal chatbot connecting to n8n/Zapier/Make.com workflows via secure webhooks.\n- Solves redundant rebuilding for agencies: single interface reusable across clients.\n- Reduces dev time 35%, revenue boost 30%, 40% faster AI delivery.\n- Focuses on logic over UI.",
-    technologies: ["Next.js", "Convex(Baas)", "n8n", "Tailwind", "Shadcn-UI", "Webhooks", "AI Integrations", "Auth", "Payments", "LLM's", "Chatbots"],
-  },
-  {
-    title: "FoodSpector: Food Auditing WebApp",
-    image: foodspector,
-    url: FOODSPECTOR_URL,
-    description: "App for freelance inspectors managing audits, replacing paper/WhatsApp.\n- Checklists with photos/notes, offline, auto-scoring, tamper-proof PDFs, dashboards.\n- FSSAI/HACCP compliant; 40+ auditors in TN/Karnataka.\n- Prioritizes correctness, reduces disputes.",
-    technologies: ["Next.js", "Convex(Baas)", "Shadcn-UI", "Tailwind", "Shadcn-UI", "n8n", "PlayWright", "LLM's"],
+    description: "Universal chatbot connecting to n8n/Zapier/Make.com workflows via secure webhooks.\n- Solves redundant rebuilding for agencies: a single interface reusable across clients.\n- Focuses on logic and integration over UI.",
+    technologies: ["Next.js", "Convex", "n8n", "Tailwind", "Shadcn-UI", "Webhooks", "LLMs", "Auth", "Payments"],
   },
   {
     title: "Chemical Industry AI Decision Chatbot",
     image: chemlaxx,
     url: CHEMLAX_URL,
-    description: "AI chatbot for chemical selection based on constraints (budget, quantity, environment).\n- Recommends solutions, reduces trial-error, ensures consistency.\n- Streaming responses, structured reasoning, guardrails for high-impact decisions.",
-    technologies: ["Next.js", "OpenAI/Anthropic APIs", "Convex(Baas)", "Shadcn-UI", "Tailwind", "Shadcn-UI"],
-  },
-  {
-    title: "AI-Todo-Pro",
-    image: aitodopro,
-    url: AI_TODO_PRO_URL,
-    description: "AI todo app for collaborative tasks.\n- AI suggests fragmentation; real-time updates, user-to-user collaboration, AI adviced prioritization.",
-    technologies: ["Next.js", "Supabase", "OpenAI-API", "OAuth", "GCP", "Tailwind", "Shadcn-UI"],
-  },
-  {
-    title: "WiseAdvices-AI",
-    image: wiseadvicesai,
-    url: WISEADVICES_AI_URL,
-    description: "AI advice app on best practices on various topics.\n- AI suggests best practices based on history and user inputs.",
-    technologies: ["Next.js", "Supabase", "Clerk", "OpenAI-API", "Anthropic-API", "Tailwind", "Shadcn-UI"],
-  },
-  {
-    title: "Todo-Pro..!!",
-    image: project2,
-    url: TODO_PRO_URL,
-    description: "Simple todo app for daily tasks.\n- Collaborative todo with sprint tracking along with drag and drop features",
-    technologies: ["React", "Node", "MongoDB", "Express", "Socket.io", "Tailwind", "AG-Grid"],
+    description: "AI chatbot for chemical selection based on constraints (budget, quantity, environment).\n- Recommends solutions, reduces trial-and-error, ensures consistency.\n- Streaming responses, structured reasoning, guardrails for high-impact decisions.",
+    technologies: ["Next.js", "OpenAI/Anthropic APIs", "Convex", "Shadcn-UI", "Tailwind"],
   },
 ];
 
+// Home address removed for privacy (2026-07-24).
 export const CONTACT = {
-  address: "12/155-1, Mohan Nagar, Salem-30",
   phoneNo: "+91 9488186900",
   email: "niresh@yeahscene.com",
 };

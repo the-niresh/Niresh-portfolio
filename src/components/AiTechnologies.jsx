@@ -6,6 +6,7 @@ import { RiAnthropicFill } from "react-icons/ri";
 import { RiClaudeFill } from "react-icons/ri";
 import { SiN8N } from "react-icons/si";
 import { SiPuppeteer } from "react-icons/si";
+import { SiClaudecode } from "react-icons/si";
 import grokLogo from "../assets/projects/grok.png";
 
 const iconVariants = (duration) => ({
@@ -58,6 +59,12 @@ const AiTechnologies = () => {
                     initial="initial"
                     animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
                     <RiClaudeFill className="text-7xl text-orange-600" />
+                </motion.div>
+                <motion.div
+                    variants={iconVariants(1.7)}
+                    initial="initial"
+                    animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
+                    <SiClaudecode className="text-7xl text-orange-400" />
                 </motion.div>
                 <motion.div
                     variants={iconVariants(1.7)}
