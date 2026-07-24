@@ -26,7 +26,7 @@ const Hero = () => {
                             initial="hidden"
                             animate="visible"
                             className="bg-gradient-to-r from-pink-300 via-slate-100 to-purple-500 bg-clip-text text-3xl tracking-tighter text-transparent">
-                            AI Full-Stack Developer • AI Automations Specialist
+                            Full-Stack & AI Systems Engineer
                         </motion.span>
                         <motion.p
                             variants={container(1)}
