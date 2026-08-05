@@ -15,8 +15,8 @@ export const CV_URL = "https://drive.google.com/file/d/1Fux0I_RjHHCyumTS6KjX-aPr
 
 export const AUTONERDS_URL = "https://autonerds-ai.vercel.app"
 export const FOODSPECTOR_URL = "https://foodspector.pro"
-export const ALIEN_TRADE_URL = "https://github.com/the-niresh/alien-trade"
-export const AGENT_DECK_URL = "https://github.com/the-niresh/agent-deck"
+export const ALIEN_TRADE_URL = "https://alientrade.niresh.tech"
+export const AGENT_DECK_URL = "https://agent.niresh.tech"
 export const CHEMLAX_URL = "https://chem-laxx.vercel.app"
 
 // Engineer-first positioning (2026-07-24). Real work only — no fabricated claims.
