@@ -21,7 +21,7 @@ const Projects = () => {
               transition={{ duration: 1 }}
               className="w-full lg:w-1/4"
             >
-              <a href={project.url} target="_blank">
+              <a href={project.url} target="_blank" rel="noopener noreferrer">
                 <img
                   src={project.image}
                   height={150}

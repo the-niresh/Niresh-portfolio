@@ -1,0 +1,47 @@
+<svg width="1920" height="1200" viewBox="0 0 1920 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glowPink" cx="15%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,0,182,0.28)" />
+      <stop offset="100%" stop-color="rgba(255,0,182,0)" />
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="90%" cy="90%" r="60%">
+      <stop offset="0%" stop-color="rgba(103,232,249,0.18)" />
+      <stop offset="100%" stop-color="rgba(103,232,249,0)" />
+    </radialGradient>
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#67e8f9" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1200" fill="#0a0a0a" />
+  <rect width="1920" height="1200" fill="url(#glowPink)" />
+  <rect width="1920" height="1200" fill="url(#glowCyan)" />
+
+  <rect x="120" y="120" width="1680" height="960" rx="24" fill="#111113" stroke="url(#cardBorder)" stroke-width="2" />
+
+  <!-- three kanban columns -->
+  <g opacity="0.9">
+    <rect x="220" y="280" width="420" height="640" rx="14" fill="#18181b" stroke="#27272a" stroke-width="2"/>
+    <rect x="260" y="330" width="340" height="90" rx="10" fill="#27272a"/>
+    <rect x="260" y="440" width="340" height="90" rx="10" fill="#27272a"/>
+    <circle cx="290" cy="303" r="6" fill="#ec4899"/>
+    <text x="310" y="309" font-family="monospace" font-size="24" fill="#a1a1aa">queued</text>
+
+    <rect x="750" y="280" width="420" height="640" rx="14" fill="#18181b" stroke="#27272a" stroke-width="2"/>
+    <rect x="790" y="330" width="340" height="90" rx="10" fill="#3f3f46"/>
+    <rect x="790" y="440" width="340" height="90" rx="10" fill="#3f3f46"/>
+    <rect x="790" y="550" width="340" height="90" rx="10" fill="#3f3f46"/>
+    <circle cx="820" cy="303" r="6" fill="#facc15"/>
+    <text x="840" y="309" font-family="monospace" font-size="24" fill="#a1a1aa">running</text>
+
+    <rect x="1280" y="280" width="420" height="640" rx="14" fill="#18181b" stroke="#27272a" stroke-width="2"/>
+    <rect x="1320" y="330" width="340" height="90" rx="10" fill="#14532d"/>
+    <rect x="1320" y="440" width="340" height="90" rx="10" fill="#14532d"/>
+    <circle cx="1350" cy="303" r="6" fill="#4ade80"/>
+    <text x="1370" y="309" font-family="monospace" font-size="24" fill="#a1a1aa">merged</text>
+  </g>
+
+  <text x="220" y="1000" font-family="monospace" font-weight="700" font-size="76" fill="#fafafa">agent-deck</text>
+  <text x="220" y="1050" font-family="monospace" font-size="30" fill="#71717a">self-hosted kanban for coding agents · Rust</text>
+</svg>

@@ -2,6 +2,7 @@ import autonerds from "../assets/projects/autonerds.png";
 import foodspector from "../assets/projects/foodspector.png";
 import chemlaxx from "../assets/projects/chemlaxx.png";
 import alientrade from "../assets/projects/alientrade.png";
+import agentdeck from "../assets/projects/agentdeck.svg";
 
 export const NAME = "Niresh"
 export const WEBSITE_URL = "https://niresh.in/"
@@ -13,8 +14,9 @@ export const WHATSAPP_URL = "https://wa.me/+919488186900"
 export const CV_URL = "https://drive.google.com/file/d/1Fux0I_RjHHCyumTS6KjX-aPrMoWLuPav/view?usp=sharing" // Upload Nire-AA-CV.pdf and replace ID
 
 export const AUTONERDS_URL = "https://autonerds-ai.vercel.app"
-export const FOODSPECTOR_URL = "https://foodspector.pro"       // TODO: confirm the production domain is live
-export const ALIEN_TRADE_URL = GITHUB_URL                       // TODO: replace with the Alien-Trade demo/repo URL
+export const FOODSPECTOR_URL = "https://foodspector.pro"
+export const ALIEN_TRADE_URL = "https://github.com/the-niresh/alien-trade"
+export const AGENT_DECK_URL = "https://github.com/the-niresh/agent-deck"
 export const CHEMLAX_URL = "https://chem-laxx.vercel.app"
 
 // Engineer-first positioning (2026-07-24). Real work only — no fabricated claims.
@@ -80,6 +82,13 @@ export const PROJECTS = [
     url: ALIEN_TRADE_URL,
     description: "An autonomous crypto-trading agent (BNB Hack 2026).\n- Deterministic Python decision core, Convex real-time state bus, and a cockpit PWA.\n- Drawdown-first discipline: validated honestly — including recording when flat cash beat the live strategy.\n- Built for reliability and ops rigor over hype.",
     technologies: ["Python", "Convex", "PWA", "BNB Chain", "Real-time", "Testing"],
+  },
+  {
+    title: "agent-deck — Self-Hosted Agent Orchestration Platform",
+    image: agentdeck,
+    url: AGENT_DECK_URL,
+    description: "A self-hosted kanban board for running coding agents, forked and hardened after the upstream project sunset.\n- Rust: Tokio, Axum, SQLx, Postgres — 30+ crates, real .sql migrations.\n- Found and fixed 3 real security holes upstream never patched (invitation bypass, OAuth redirect validation, open registration).\n- Runs in production on my own VPS behind Traefik + Let's Encrypt.",
+    technologies: ["Rust", "Tokio", "Axum", "Postgres", "SQLx", "Traefik"],
   },
   {
     title: "Universal Automation-Connected Chatbot",
