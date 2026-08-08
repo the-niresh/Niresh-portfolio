@@ -33,7 +33,7 @@ const archon = {
     { t: "h", text: "The workflow file is the whole argument" },
     {
       t: "p",
-      text: "This is their shipped PR review block. Not an example from the docs — the file the tool actually runs on its own pull requests:",
+      text: "This is their shipped PR review block. Not an example from the docs. This is the file the tool actually runs on its own pull requests:",
     },
     {
       t: "code",
@@ -185,7 +185,7 @@ self.lock.refresh_if_due().await?;`,
     },
     {
       t: "p",
-      text: "`include:` and `workflow:` read like node types when you are writing the file, but they never reach the executor as nodes — they are expanded away at load time. That is why the executor's very first check inside a node body is a guard that throws if an unexpanded include ever gets that far. Six things run. The rest is structure that has already been flattened by the time anything executes.",
+      text: "`include:` and `workflow:` read like node types when you are writing the file, but they never reach the executor as nodes. They are expanded away at load time. That is why the executor's very first check inside a node body is a guard that throws if an unexpanded include ever gets that far. Six things run. The rest is structure that has already been flattened by the time anything executes.",
     },
     {
       t: "p",
@@ -203,7 +203,7 @@ self.lock.refresh_if_due().await?;`,
       items: [
         "`include:` is a real language feature, not copy-paste. The review block is pulled into other workflows with one line, names get prefixed as `review__sync` so they cannot collide, and it resolves at load time so the engine still sees one flat graph.",
         "An unexpanded `include` node reaching the executor throws immediately, and the guard is the first thing in the node body specifically so it cannot be swallowed by a skip, a `when:` or a trigger rule. Somebody had that bug.",
-        "They deleted 434 lines from their own instruction file in `cef6d7de` — 1008 down to 574 — because the tools already report it better. Half of most instruction files describes a folder tree the agent can just go and look at.",
+        "They deleted 434 lines from their own instruction file in `cef6d7de`, 1008 lines down to 574, because the tools already report it better. Half of most instruction files describes a folder tree the agent can just go and look at.",
         "The commit immediately before that one is `ec187c20`, \"correct rotted counts and a wrong path in CLAUDE.md\". They had numbers in their instruction file that had quietly stopped being true. So did I, at the top of the Codex write-up. It happens to everyone and the only defence is writing down how you counted.",
         "A migration that added a column, then an index and a trigger using it, ran the index first and died. Migrations are a sequence, not a set.",
       ],

@@ -22,7 +22,7 @@ const codex = {
   hero: {
     src: hero,
     alt: "Eleven of Codex's crates exist only to contain the agent",
-    caption: "The diagram says 109. I now count 130. See below — I would rather show the disagreement than quietly redraw it.",
+    caption: "The diagram says 109. I now count 130. See below. I would rather show the disagreement than quietly redraw it.",
   },
   headline: { value: "11 / 130", label: "crates spent purely on containment" },
 
@@ -163,7 +163,7 @@ pub(crate) struct ToolCallRuntime {
     },
     {
       t: "mine",
-      text: "I have three locks in my exchange and until this week I thought they were all the same kind of thing. They are not. `Arc<Mutex<State>>` protects memory. The Redis lease in `EngineLock` protects a fact about the world — that I am the only engine on this stream. Codex's `RwLock<()>` protects neither; it only decides who goes next. Three locks, three jobs, one of them actually about data.",
+      text: "I have three locks in my exchange and until this week I thought they were all the same kind of thing. They are not. `Arc<Mutex<State>>` protects memory. The Redis lease in `EngineLock` protects a fact about the world, that I am the only engine on this stream. Codex's `RwLock<()>` protects neither; it only decides who goes next. Three locks, three jobs, one of them actually about data.",
     },
 
     {
@@ -242,11 +242,11 @@ impl Drop for Runner {
     },
     {
       t: "p",
-      text: "A tokio `abort()` drops the task at its next await point. My query task never holds the state lock across an await — that was already a rule, for a different reason, so that a query can never see a half-applied command. Which means abort can only ever land between two whole commands. There is nothing half-finished to tear down. The hammer is safe here, and it is safe because of a rule I made for an unrelated reason.",
+      text: "A tokio `abort()` drops the task at its next await point. My query task never holds the state lock across an await. That was already a rule, for a different reason, so that a query can never see a half-applied command. Which means abort can only ever land between two whole commands. There is nothing half-finished to tear down. The hammer is safe here, and it is safe because of a rule I made for an unrelated reason.",
     },
     {
       t: "p",
-      text: "It stops being safe the moment a task owns something outside memory. A child process. A file it is halfway through writing. An open Redis transaction. Codex needs the graceful phase because its tool calls shell out, and you cannot kill a process tree by dropping a future. The pattern I am taking is not the token tree. It is `or_cancel` — because the cost of adding it now is nearly nothing, and the cost of adding it after I have a task that owns a child process is a rewrite.",
+      text: "It stops being safe the moment a task owns something outside memory. A child process. A file it is halfway through writing. An open Redis transaction. Codex needs the graceful phase because its tool calls shell out, and you cannot kill a process tree by dropping a future. The pattern I am taking is not the token tree. It is `or_cancel`, because the cost of adding it now is nearly nothing, and the cost of adding it after I have a task that owns a child process is a rewrite.",
     },
     {
       t: "p",
@@ -339,7 +339,7 @@ impl Drop for Runner {
       t: "list",
       items: [
         "`store: false`. Codex does not keep conversation state on the server. It resends the entire item list, including encrypted reasoning, on every request. That one setting is why history rebuilding and prompt-prefix stability are load-bearing rather than tidy-ups.",
-        "A tool can be registered and executable without the model being able to see it. `ToolExposure` in `tools/src/tool_executor.rs:51` has Direct, Deferred and hidden variants — which is how fifty MCP schemas stay out of your context.",
+        "A tool can be registered and executable without the model being able to see it. `ToolExposure` in `tools/src/tool_executor.rs:51` has Direct, Deferred and hidden variants. That is how fifty MCP schemas stay out of your context.",
         "The tool list is frozen into the step context and re-registered from scratch every step, so a tool call arriving late still resolves against the list that produced it. If your agent lets the tool set change mid-run, that is a bug you have not hit yet.",
         "Their instruction file bans helper methods used only once, and they wrote a checker for it. Instruction files are scar tissue. Every rule in one is a thing that already went wrong.",
       ],

@@ -150,7 +150,7 @@ const DEV_PORT_PROBE_HOSTS = ["127.0.0.1", "::1"] as const;`,
     },
     {
       t: "mine",
-      text: "My feed makes the opposite promise. Falling behind is not repairable, so I do not let the client try — a slow subscriber gets closed with the reason, and has to reconnect and take a fresh snapshot. Order book depth is not worth catching up on, and a book rebuilt from a feed with a hole in it is wrong without ever looking wrong.",
+      text: "My feed makes the opposite promise. Falling behind is not repairable, so I do not let the client try. A slow subscriber gets closed with the reason, and has to reconnect and take a fresh snapshot. Order book depth is not worth catching up on, and a book rebuilt from a feed with a hole in it is wrong without ever looking wrong.",
       file: "cex/crates/ws/src/server.rs:6",
       lang: "rust",
       code: `//! ## What happens to a subscriber that cannot keep up
@@ -203,7 +203,7 @@ const DEV_PORT_PROBE_HOSTS = ["127.0.0.1", "::1"] as const;`,
     { t: "h", text: "Two things I would push back on" },
     {
       t: "p",
-      text: "Their architecture doc says Codex is the only implemented provider. The code has five. That is not a nitpick — it is the visible cost of the thing I actually worry about here: five providers means every new feature has to be built five times, and the doc is the first thing to be dropped when that gets heavy.",
+      text: "Their architecture doc says Codex is the only implemented provider. The code has five. That is not a nitpick. It shows the cost of the thing I actually worry about here: five providers means every new feature has to be built five times, and the doc is the first thing to be dropped when that gets heavy.",
     },
     {
       t: "p",
@@ -225,7 +225,7 @@ const DEV_PORT_PROBE_HOSTS = ["127.0.0.1", "::1"] as const;`,
       t: "list",
       items: [
         "Declaring capabilities on the interface instead of throwing later. My exchange has two order types that not every market supports, and right now the market finds out by failing.",
-        "Writing the bug into the comment. Not what the code does — what happened, and to whom.",
+        "Writing the bug into the comment. Not what the code does. What happened, and to whom.",
         "A project-specific lint rule instead of a paragraph in a contributing guide. The bar for writing your own plugin used to be high and it is not any more.",
         "Per-agent isolated working state. Third project in a row doing this, so I have stopped treating it as a coincidence.",
       ],
