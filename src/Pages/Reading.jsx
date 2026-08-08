@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 import { getReading, READINGS, CONCLUSION } from "../data/readings";
 
 const fade = (delay = 0) => ({
@@ -8,6 +9,32 @@ const fade = (delay = 0) => ({
   viewport: { once: true, margin: "-80px" },
   transition: { duration: 0.5, delay },
 });
+
+const Figure = ({ src, alt, caption, priority = false }) => (
+  <figure className="my-8">
+    <div className="overflow-hidden rounded-lg border border-neutral-800 bg-white p-3 shadow-lg shadow-black/40">
+      <img
+        src={src}
+        alt={alt || caption}
+        width="1280"
+        height="640"
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+        className="h-auto w-full"
+      />
+    </div>
+    {caption ? (
+      <figcaption className="mt-3 text-sm text-neutral-500">{caption}</figcaption>
+    ) : null}
+  </figure>
+);
+
+Figure.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  caption: PropTypes.string,
+  priority: PropTypes.bool,
+};
 
 const NotFound = () => (
   <div className="pt-32 pb-24 text-center">
@@ -66,6 +93,12 @@ const Reading = () => {
         </p>
       </motion.header>
 
+      {reading.hero ? (
+        <motion.div {...fade(0.03)}>
+          <Figure src={reading.hero.src} alt={reading.hero.alt} priority />
+        </motion.div>
+      ) : null}
+
       <motion.section {...fade(0.05)} className="grid gap-10 py-12 lg:grid-cols-[1fr_auto]">
         <div>
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-neutral-500">
@@ -94,6 +127,11 @@ const Reading = () => {
               <div>
                 <h3 className="mb-2 text-lg text-neutral-200">{f.title}</h3>
                 <p className="max-w-2xl leading-relaxed text-neutral-400">{f.body}</p>
+                {f.figure ? (
+                  <div className="max-w-2xl">
+                    <Figure src={f.figure.src} caption={f.figure.caption} />
+                  </div>
+                ) : null}
               </div>
             </motion.li>
           ))}
@@ -127,6 +165,11 @@ const Reading = () => {
       <motion.section {...fade()} className="mt-16 border-t border-neutral-800 pt-12">
         <h2 className="mb-3 text-2xl text-neutral-200">{CONCLUSION.title}</h2>
         <p className="max-w-2xl leading-relaxed text-neutral-400">{CONCLUSION.body}</p>
+        {CONCLUSION.image ? (
+          <div className="max-w-2xl">
+            <Figure src={CONCLUSION.image.src} alt={CONCLUSION.image.alt} />
+          </div>
+        ) : null}
       </motion.section>
 
       <nav className="mt-16 flex flex-wrap gap-4 border-t border-neutral-800 pt-8">

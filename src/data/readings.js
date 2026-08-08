@@ -5,6 +5,18 @@
 // which is exactly the wrong link to hand a hiring manager. This is the analysis;
 // the repo link is credit and sits inside the page.
 
+import codexCage from "../assets/readings/img-0016-codex-cage.png";
+import codexOwnCage from "../assets/readings/img-0025-agent-own-cage.png";
+import codexSandboxes from "../assets/readings/img-0023-codex-sandboxes.png";
+import codexMemory from "../assets/readings/img-0026-codex-memory.png";
+import archonWhat from "../assets/readings/img-0021-what-archon-is.png";
+import archonWorktrees from "../assets/readings/img-0017-archon-worktrees.png";
+import archonNodes from "../assets/readings/img-0022-archon-nodes.png";
+import t3What from "../assets/readings/img-0029-what-t3code-is.png";
+import t3Adapters from "../assets/readings/img-0019-t3code-adapters.png";
+import t3Streaming from "../assets/readings/img-0030-t3code-streaming.png";
+import allAgree from "../assets/readings/img-0024-all-agree.png";
+
 export const READINGS = [
   {
     slug: "codex",
@@ -15,6 +27,7 @@ export const READINGS = [
     tagline: "109 Rust crates. Nine of them exist only to keep the agent in its box.",
     whatItIs:
       "Codex is OpenAI's coding agent. You type what you want in a terminal, it edits your files, runs your tests and hands the work back. I read the source for two weeks to answer one question: how do you build software that is allowed to touch somebody's codebase without wrecking it?",
+    hero: { src: codexCage, alt: "Nine of Codex's 109 Rust crates exist only to contain the agent" },
     headline: { value: "9 / 109", label: "crates spent purely on containment" },
     findings: [
       {
@@ -23,6 +36,7 @@ export const READINGS = [
       },
       {
         title: "The instruction file explains the agent to itself",
+        figure: { src: codexOwnCage, caption: "Most instruction files are rules for a worker. This one describes the reader." },
         body: "There is a rule saying a particular environment setting exists because the agent cannot reach the network, and that any existing code checking it was written by somebody who already knew that about the reader. It is not telling the model to behave. It is telling the model what kind of thing it is. I had not seen an instruction file do that before.",
       },
       {
@@ -31,10 +45,12 @@ export const READINGS = [
       },
       {
         title: "Three cages, one per operating system",
+        figure: { src: codexSandboxes, caption: "Three sandboxes, because no two machines stop a process the same way." },
         body: "Apple's seatbelt on a Mac, bubblewrap on Linux, and a separate package for Windows. Nobody writes three sandboxes for fun. They wrote three because the agent has to be stopped the same way everywhere and no two machines stop it the same way.",
       },
       {
         title: "The session is the record, not the screen",
+        figure: { src: codexMemory, caption: "Everything on disk, so a session can be closed, resumed, and forked." },
         body: "Every session is written to disk as it happens rather than summarised afterwards. That is what makes a session resumable, and forkable like a git branch. Same principle as the command log in the exchange I am building: write it down first, work out what it means second.",
       },
     ],
@@ -55,14 +71,17 @@ export const READINGS = [
     tagline: "Dockerfiles, but for how your AI works rather than how your server boots.",
     whatItIs:
       "When you tell a coding agent to fix a bug, what it actually does depends on the day. It might skip planning. It might not run the tests. Every run is different, which is fine for a toy and useless for real work. Archon makes you write the steps down once, as a file in your repo — plan, implement, test, review, open the PR. The model still supplies the thinking. You own the order, and the order does not change.",
+    hero: { src: archonWhat, alt: "An Archon workflow: plan, write, test, review, open the PR" },
     headline: { value: "1 worktree", label: "per run, so agents cannot collide" },
     findings: [
       {
         title: "Every run gets its own copy of the repo",
+        figure: { src: archonWorktrees, caption: "Three agents, three worktrees, one repo, no collisions." },
         body: "Three agents fixing three different bugs at the same time, and none of them can touch another one's files. I had been running mine one at a time and waiting for each to finish. This is the single idea from the whole fortnight I put straight into my own setup.",
       },
       {
         title: "The interesting part is the steps with no AI in them",
+        figure: { src: archonNodes, caption: "The model runs where it adds something. Everything else is plain code." },
         body: "Running the tests, committing, opening the pull request — that is ordinary code, and ordinary code does the same thing every time. The model only runs where it genuinely adds something: planning, writing, reviewing. That split is why a run comes out the same twice. Not a better prompt. Fewer places where a prompt matters at all.",
       },
       {
@@ -95,14 +114,17 @@ export const READINGS = [
     tagline: "One web screen driving four completely different coding agents.",
     whatItIs:
       "There are four or five good coding agents now and every one of them lives in a terminal. t3code puts a web page in front of them, so you can drive them from a browser, from a phone, from anywhere that is not the machine they are running on.",
+    hero: { src: t3What, alt: "t3code moves four terminal agents into a browser" },
     headline: { value: "4 → 1", label: "agent CLIs behind a single interface" },
     findings: [
       {
         title: "The adapter is the product, the screen is the demo",
+        figure: { src: t3Adapters, caption: "Four CLIs with four opinions, flattened into one shape." },
         body: "Codex, Claude, Cursor and OpenCode each have their own ideas about sessions, streaming, permissions and error handling. All of that has to be flattened into one shape before the page can render any of it. That layer underneath is where the actual engineering is.",
       },
       {
         title: "Terminals stream, and browsers do not enjoy it",
+        figure: { src: t3Streaming, caption: "Output arriving forever, from four sources, into one page." },
         body: "Output arrives a character at a time, forever, and the page has to stay upright while four agents talk at once. It is the same problem I hit on my exchange front end, and it is why so much of t3code is plumbing rather than interface.",
       },
       {
@@ -124,6 +146,7 @@ export const READINGS = [
 ];
 
 export const CONCLUSION = {
+  image: { src: allAgree, alt: "Codex, Archon and t3code all spend most of their code on isolation" },
   title: "What all three agree on",
   body: "Codex spends nine packages on sandboxes. Archon gives every run its own copy of the repository. t3code isolates each agent's working state. Three different teams, three different problems, and the same answer underneath: make sure the model cannot reach past the thing you handed it. That is not the conversation happening in public, where it is all about which model and what context window. Inside these repositories almost none of the code is about that. The model is the cheap part now. The box around it is the work.",
 };
