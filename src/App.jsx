@@ -9,6 +9,7 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Reading from './Pages/Reading'
+import Blog from './components/Blog'
 
 const Home = () => (
   <>
@@ -18,6 +19,7 @@ const Home = () => (
     <AiTechnologies />
     <Experience />
     <Projects />
+    <Blog />
     <Contact />
   </>
 )
@@ -35,7 +37,8 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/projects/:projectName" element={<Reading />} />
+            <Route path="/blog/:slug" element={<Reading />} />
+            <Route path="/projects/:slug" element={<Reading />} />
           </Routes>
         </div>
       </div>

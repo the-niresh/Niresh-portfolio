@@ -16,11 +16,16 @@ import t3What from "../assets/readings/img-0029-what-t3code-is.png";
 import t3Adapters from "../assets/readings/img-0019-t3code-adapters.png";
 import t3Streaming from "../assets/readings/img-0030-t3code-streaming.png";
 import allAgree from "../assets/readings/img-0024-all-agree.png";
+import codexExecPath from "../assets/readings/img-0032-codex-exec-path.png";
+import seatbeltPolicy from "../assets/readings/img-0033-seatbelt-policy.png";
 
 export const READINGS = [
   {
     slug: "codex",
     name: "Codex",
+    published: "23 August 2026",
+    minutes: 9,
+    excerpt: "What actually happens when an AI agent runs one shell command — the real call path, from SandboxManager down to the kernel saying no.",
     owner: "OpenAI",
     repo: "https://github.com/openai/codex",
     dates: "10 – 23 August 2026",
@@ -54,6 +59,22 @@ export const READINGS = [
         body: "Every session is written to disk as it happens rather than summarised afterwards. That is what makes a session resumable, and forkable like a git branch. Same principle as the command log in the exchange I am building: write it down first, work out what it means second.",
       },
     ],
+    deepDive: {
+      title: "The part you only get by reading it",
+      intro:
+        "Everything above is findable. This is not. When the agent asks to run a shell command, here is the path it actually travels, function by function.",
+      figure: { src: codexExecPath, caption: "SandboxManager::select_initial → transform → exec, and what happens when it fails." },
+      steps: [
+        { code: "execpolicy → Decision", text: "Not a list of banned words. A rulebook with its own parser, its own tests, and an amend path — so a policy change is a code change you can review." },
+        { code: "SandboxablePreference", text: "Three states. Forbid skips the sandbox entirely. Require always takes one. Auto derives it by calling should_require_platform_sandbox with the filesystem policy and the network policy together — neither alone is enough to decide." },
+        { code: "get_platform_sandbox()", text: "Returns a SandboxType per host: Seatbelt on macOS driving sandbox-exec with a .sbpl policy file, Landlock plus bwrap on Linux, a separate crate on Windows. If the host offers none, it degrades to SandboxType::None rather than refusing to run." },
+        { code: "transform()", text: "Rewrites argv in place. Your rm -rf build/ becomes [sandbox-exec, -p, <policy>, --, rm, -rf, build/]. The agent's command is now an argument to something else, which is the whole trick." },
+        { code: "is_likely_sandbox_denied()", text: "The one that surprised me. When the command fails, Codex cannot actually tell you the sandbox was the cause — the kernel returns an ordinary permission error. So it guesses, from a heuristic. Named honestly, too." },
+      ],
+      second: { src: seatbeltPolicy, caption: "The shipped macOS policy: closed by default, then opened one narrow hole at a time." },
+      closing:
+        "The policy file is worth reading on its own. It opens with (deny default) and every line after it is a hole someone argued for. process-exec and process-fork are allowed so children inherit the parent's policy, which closes the obvious escape of spawning your way out. Signals are allowed only at targets in the same sandbox. Even writing to /dev/null is narrowed with require-all to that exact path AND that exact vnode type. Their own comment credits Chrome's renderer sandbox, with source links.",
+    },
     stealing: [
       "The executable policy file for what a command may run — better than the hand-written allowlist I had",
       "Their three testing rules: compare whole objects, never test values that cannot change, never add a test for logic you just deleted",
@@ -65,6 +86,9 @@ export const READINGS = [
   {
     slug: "archon",
     name: "Archon",
+    published: "30 August 2026",
+    minutes: 7,
+    excerpt: "A workflow engine that makes agent runs repeatable, and the one idea in it I put straight into my own setup.",
     owner: "Cole Medin",
     repo: "https://github.com/coleam00/Archon",
     dates: "17 – 30 August 2026",
@@ -108,6 +132,9 @@ export const READINGS = [
   {
     slug: "t3code",
     name: "t3code",
+    published: "5 September 2026",
+    minutes: 6,
+    excerpt: "One web page driving four different coding agents, and why the adapter underneath is the actual product.",
     owner: "Theo / Ping.gg",
     repo: "https://github.com/pingdotgg/t3code",
     dates: "24 August – 5 September 2026",

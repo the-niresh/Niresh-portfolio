@@ -44,7 +44,7 @@ const NotFound = () => (
       {READINGS.map((r) => (
         <Link
           key={r.slug}
-          to={`/projects/${r.slug}`}
+          to={`/blog/${r.slug}`}
           className="rounded border border-neutral-800 bg-neutral-900/60 px-4 py-2 text-sm text-purple-300 transition hover:border-purple-800"
         >
           {r.name}
@@ -55,8 +55,8 @@ const NotFound = () => (
 );
 
 const Reading = () => {
-  const { projectName } = useParams();
-  const reading = getReading(projectName);
+  const { slug } = useParams();
+  const reading = getReading(slug);
   if (!reading) return <NotFound />;
 
   const others = READINGS.filter((r) => r.slug !== reading.slug);
@@ -72,7 +72,7 @@ const Reading = () => {
 
       <motion.header {...fade()} className="border-b border-neutral-800 pb-10">
         <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-purple-400">
-          Reading the source &middot; {reading.dates}
+          Reading the source &middot; {reading.published || reading.dates} &middot; {reading.minutes} min
         </p>
         <h1 className="mb-4 text-4xl leading-tight lg:text-6xl">
           <span className="bg-gradient-to-r from-pink-300 via-slate-300 to-purple-400 bg-clip-text text-transparent">
@@ -177,7 +177,7 @@ const Reading = () => {
         {others.map((r) => (
           <Link
             key={r.slug}
-            to={`/projects/${r.slug}`}
+            to={`/blog/${r.slug}`}
             className="rounded border border-neutral-800 bg-neutral-900/60 px-4 py-3 transition hover:border-purple-800"
           >
             <span className="block text-neutral-200">{r.name}</span>
