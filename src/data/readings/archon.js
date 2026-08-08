@@ -107,6 +107,22 @@ const archon = {
       t: "note",
       text: "Lesson I keep re-learning: the config file tells you what the authors meant. Only the executor tells you what happens.",
     },
+    {
+      t: "p",
+      text: "I have a strong opinion about this trade because my engine sits at the far end of it. Archon gives up some concurrency to get a clean restart point. I give up all of it:",
+    },
+    {
+      t: "mine",
+      text: "One command at a time, and the position only moves after that command has been applied and published. There is no wave and no parallelism at all, because the position has to mean something exact after a crash. Archon buys resumability with a barrier per layer. I buy it with a barrier per command. Their version is a design choice with a cost I can measure. Mine is the same choice taken as far as it goes, and I had been calling it \"the engine is simple\" rather than admitting what it costs.",
+      file: "cex/crates/engine/src/runner.rs:206",
+      lang: "rust",
+      code: `self.handle(&payload).await;
+
+// Advance only after the command is fully applied and published.
+self.position = id;
+applied += 1;
+self.applied_since_snapshot += 1;`,
+    },
 
     { t: "h", text: "The rule engine is thirty lines" },
     {
