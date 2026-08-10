@@ -22,14 +22,14 @@ export const CHEMLAX_URL = "https://chem-laxx.vercel.app"
 export const CEX_URL = "https://cex.niresh.tech"
 export const CEX_REPO_URL = "https://github.com/the-niresh/cex"
 
-// Engineer-first positioning (2026-07-24). Real work only — no fabricated claims.
-export const HERO_CONTENT_1 = `Full-stack & AI systems engineer. I build production systems end to end — a multi-tenant SaaS, autonomous agents, and the infrastructure behind them. Ex-Tata Elxsi.`;
+// Engineer-first positioning (2026-07-24). Real work only - no fabricated claims.
+export const HERO_CONTENT_1 = `Full-stack & AI systems engineer. I build production systems end to end - a multi-tenant SaaS, autonomous agents, and the infrastructure behind them. Ex-Tata Elxsi.`;
 
-export const HERO_CONTENT_2 = `Ship with React, Next.js, Node.js, Convex, PostgreSQL on Cloudflare and AWS — and the parts that actually matter in production: auth, tenant isolation, data integrity, background jobs, tests, and cost control.`;
+export const HERO_CONTENT_2 = `Ship with React, Next.js, Node.js, Convex, PostgreSQL on Cloudflare and AWS - and the parts that actually matter in production: auth, tenant isolation, data integrity, background jobs, tests, and cost control.`;
 
-export const HERO_CONTENT_3 = `Currently building FoodSpector — a multi-tenant food-compliance platform — and autonomous developer tooling for shipping software with AI agents.`;
+export const HERO_CONTENT_3 = `Currently building FoodSpector - a multi-tenant food-compliance platform - and autonomous developer tooling for shipping software with AI agents.`;
 
-export const ABOUT_TEXT = `Full-stack and AI systems engineer. I build production systems end to end — frontend (React / Next.js), backend (Node.js / Convex / Postgres), and the infrastructure around them (auth, background jobs, object storage, tests, CI/CD). Comfortable with the hard parts most demos skip: multi-tenant isolation, data integrity, retries, and edge cases. Previously a Senior Engineer at Tata Elxsi — fixed 250+ bugs, built UIs over 15k+ record datasets, and helped open-source 80% of a product. Now building FoodSpector (a multi-tenant compliance platform) and autonomous/AI tooling on the side. I own problems end to end.`;
+export const ABOUT_TEXT = `Full-stack and AI systems engineer. I build production systems end to end - frontend (React / Next.js), backend (Node.js / Convex / Postgres), and the infrastructure around them (auth, background jobs, object storage, tests, CI/CD). Comfortable with the hard parts most demos skip: multi-tenant isolation, data integrity, retries, and edge cases. Previously a Senior Engineer at Tata Elxsi - fixed 250+ bugs, built UIs over 15k+ record datasets, and helped open-source 80% of a product. Now building FoodSpector (a multi-tenant compliance platform) and autonomous/AI tooling on the side. I own problems end to end.`;
 
 export const ABOUT_TECHNOLOGIES = ["React", "Next.js", "TypeScript", "Node.js", "Express.js", "Convex", "PostgreSQL", "Supabase", "Neon", "MongoDB", "Prisma", "Redis", "Cloudflare Workers", "R2", "Docker", "AWS", "CI/CD", "n8n", "OpenAI", "Anthropic", "LLMs", "Playwright", "Cypress", "Socket.io", "Shadcn-UI", "Tailwind", "OAuth", "Webhooks", "Stripe", "Kafka"];
 
@@ -73,32 +73,32 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "cex — Spot Exchange in Rust",
+    title: "cex - Spot Exchange in Rust",
     image: cex,
     url: CEX_URL,
     repo: CEX_REPO_URL,
-    description: "A centralised spot exchange, built end to end: order book, matching, settlement, live market data and a trading screen.\n- The exchange is one deterministic state machine — apply(state, command) → events — running single-threaded over a durable Redis command log, so the whole state can be rebuilt by replaying it.\n- Money never becomes a float. Prices and quantities are integers everywhere, including in the browser, which parses the JSON text itself because JSON.parse would round a 64-bit integer first.\n- Four processes: engine owns state, api speaks HTTP, ws fans out market data, persist writes history to Postgres. The engine never waits on the database.\n- A gap in the market-data feed is assumed, not hoped against: every update carries a sequence number, and a book that misses one is marked stale until a fresh snapshot arrives.\n- 412 Rust tests, plus a Playwright suite that registers, deposits and trades against the real exchange — no mock backend anywhere.",
+    description: "A centralised spot exchange, built end to end: order book, matching, settlement, live market data and a trading screen.\n- The exchange is one deterministic state machine - apply(state, command) → events - running single-threaded over a durable Redis command log, so the whole state can be rebuilt by replaying it.\n- Money never becomes a float. Prices and quantities are integers everywhere, including in the browser, which parses the JSON text itself because JSON.parse would round a 64-bit integer first.\n- Four processes: engine owns state, api speaks HTTP, ws fans out market data, persist writes history to Postgres. The engine never waits on the database.\n- A gap in the market-data feed is assumed, not hoped against: every update carries a sequence number, and a book that misses one is marked stale until a fresh snapshot arrives.\n- 412 Rust tests, plus a Playwright suite that registers, deposits and trades against the real exchange - no mock backend anywhere.",
     technologies: ["Rust", "Tokio", "Axum", "Redis", "PostgreSQL", "SQLx", "WebSocket", "React", "TypeScript", "Playwright", "Docker", "Traefik"],
   },
   {
-    title: "FoodSpector — Multi-tenant Food-Compliance SaaS",
+    title: "FoodSpector - Multi-tenant Food-Compliance SaaS",
     image: foodspector,
     url: FOODSPECTOR_URL,
-    description: "A multi-tenant compliance platform for the food industry — audits, checklists, and immutable records.\n- One Convex backend enforcing three separate authorization models with strict tenant isolation.\n- Auto-generated PDF reports via a Cloudflare Workers + R2 + queue pipeline.\n- 450+ backend tests; tamper-evident records (corrections make a new version, never a silent edit).",
+    description: "A multi-tenant compliance platform for the food industry - audits, checklists, and immutable records.\n- One Convex backend enforcing three separate authorization models with strict tenant isolation.\n- Auto-generated PDF reports via a Cloudflare Workers + R2 + queue pipeline.\n- 450+ backend tests; tamper-evident records (corrections make a new version, never a silent edit).",
     technologies: ["Next.js", "React", "TypeScript", "Convex", "Cloudflare Workers", "R2", "Tailwind", "Playwright", "LLMs"],
   },
   {
-    title: "Alien-Trade — Autonomous Trading Agent",
+    title: "Alien-Trade - Autonomous Trading Agent",
     image: alientrade,
     url: ALIEN_TRADE_URL,
-    description: "An autonomous crypto-trading agent (BNB Hack 2026).\n- Deterministic Python decision core, Convex real-time state bus, and a cockpit PWA.\n- Drawdown-first discipline: validated honestly — including recording when flat cash beat the live strategy.\n- Built for reliability and ops rigor over hype.",
+    description: "An autonomous crypto-trading agent (BNB Hack 2026).\n- Deterministic Python decision core, Convex real-time state bus, and a cockpit PWA.\n- Drawdown-first discipline: validated honestly - including recording when flat cash beat the live strategy.\n- Built for reliability and ops rigor over hype.",
     technologies: ["Python", "Convex", "PWA", "BNB Chain", "Real-time", "Testing"],
   },
   {
-    title: "agent-deck — Self-Hosted Agent Orchestration Platform",
+    title: "agent-deck - Self-Hosted Agent Orchestration Platform",
     image: agentdeck,
     url: AGENT_DECK_URL,
-    description: "A self-hosted kanban board for running coding agents, forked and hardened after the upstream project sunset.\n- Rust: Tokio, Axum, SQLx, Postgres — 30+ crates, real .sql migrations.\n- Found and fixed 3 real security holes upstream never patched (invitation bypass, OAuth redirect validation, open registration).\n- Runs in production on my own VPS behind Traefik + Let's Encrypt.",
+    description: "A self-hosted kanban board for running coding agents, forked and hardened after the upstream project sunset.\n- Rust: Tokio, Axum, SQLx, Postgres - 30+ crates, real .sql migrations.\n- Found and fixed 3 real security holes upstream never patched (invitation bypass, OAuth redirect validation, open registration).\n- Runs in production on my own VPS behind Traefik + Let's Encrypt.",
     technologies: ["Rust", "Tokio", "Axum", "Postgres", "SQLx", "Traefik"],
   },
   {

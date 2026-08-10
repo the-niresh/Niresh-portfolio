@@ -1,7 +1,7 @@
 // Code display for the source-reading write-ups.
 //
 // No highlighting library. A blog page has a small JS budget and the whole job
-// here is comments, strings, keywords and numbers — about forty lines of regex.
+// here is comments, strings, keywords and numbers - about forty lines of regex.
 // The tokeniser returns React nodes rather than HTML, so there is no
 // dangerouslySetInnerHTML anywhere near source text pasted out of other
 // people's repositories.
