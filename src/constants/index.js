@@ -42,7 +42,7 @@ export const SKILLS = {
 
 export const EXPERIENCES = [
   {
-    year: "2024 - Present",
+    year: "2025 - Present",
     role: "Founding Engineer",
     company: "FoodSpector · YeahScene",
     description: `Building FoodSpector, a multi-tenant food-compliance SaaS, end to end:\n- One Convex backend enforcing three separate authorization models (store membership, record ownership, engagement-scoped third-party audits) with tenant isolation.\n- Auto-generated compliance PDF reports via a Cloudflare Workers + R2 + queue pipeline.\n- 450+ backend tests guarding data integrity; immutable, tamper-evident audit records.`,
