@@ -1,5 +1,6 @@
 import { EXPERIENCES } from "../constants"
 import { motion } from "framer-motion"
+import Description from "./Description"
 
 const Experience = () => {
     return (
@@ -30,9 +31,7 @@ const Experience = () => {
                                     {experience.company}
                                 </span>
                             </h6>
-                            <p className="mb-4 text-neutral-400">
-                                {experience.description}
-                            </p>
+                            <Description text={experience.description} />
                             <div className="mt-4 flex flex-wrap gap-2">
                                 {experience.technologies.map((tech, index) => (
                                     <span key={index} className="max-w-full break-words rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800">{tech}</span>

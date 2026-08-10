@@ -9,6 +9,7 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Reading from './Pages/Reading'
+import Blogs from './Pages/Blogs'
 import Blog from './components/Blog'
 
 const Home = () => (
@@ -40,6 +41,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/blogs" element={<Blogs />} />
             <Route path="/blog/:slug" element={<Reading />} />
             <Route path="/projects/:slug" element={<Reading />} />
           </Routes>

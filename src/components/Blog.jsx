@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { READINGS } from "../data/readings";
+import BlogCard from "./BlogCard";
+
+// The home page shows the newest few. /blogs has the whole list.
+const ON_HOME = 3;
 
 const Blog = () => (
   <div className="border-b border-neutral-900 pb-4">
@@ -17,28 +21,17 @@ const Blog = () => (
       which is in the README, but how it actually works underneath.
     </p>
     <div className="grid gap-6 lg:grid-cols-3">
-      {READINGS.map((r, i) => (
-        <motion.div
-          key={r.slug}
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 40 }}
-          transition={{ duration: 0.6, delay: i * 0.08 }}
-        >
-          <Link
-            to={`/blog/${r.slug}`}
-            className="group flex h-full flex-col rounded-lg border border-neutral-800 bg-neutral-900/40 p-6 transition hover:border-purple-800"
-          >
-            <span className="mb-3 font-mono text-xs uppercase tracking-[0.18em] text-purple-400">
-              {r.published} &middot; {r.minutes} min
-            </span>
-            <h3 className="mb-3 text-xl text-neutral-200 transition group-hover:text-purple-200">
-              {r.name}
-            </h3>
-            <p className="mb-4 flex-1 text-sm leading-relaxed text-neutral-400">{r.excerpt}</p>
-            <span className="font-mono text-xs text-neutral-500">Read &rarr;</span>
-          </Link>
-        </motion.div>
+      {READINGS.slice(0, ON_HOME).map((r, i) => (
+        <BlogCard key={r.slug} reading={r} delay={i * 0.08} />
       ))}
+    </div>
+    <div className="mt-10 text-center">
+      <Link
+        to="/blogs"
+        className="inline-block rounded border border-neutral-800 bg-neutral-900/60 px-5 py-2.5 text-sm text-purple-300 transition hover:border-purple-800 hover:text-purple-200"
+      >
+        All posts ({READINGS.length}) &rarr;
+      </Link>
     </div>
   </div>
 );

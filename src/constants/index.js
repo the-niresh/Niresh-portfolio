@@ -3,6 +3,7 @@ import foodspector from "../assets/projects/foodspector.png";
 import chemlaxx from "../assets/projects/chemlaxx.png";
 import alientrade from "../assets/projects/alientrade.png";
 import agentdeck from "../assets/projects/agentdeck.svg";
+import cex from "../assets/projects/cex.png";
 
 export const NAME = "Niresh"
 export const WEBSITE_URL = "https://niresh.in/"
@@ -18,6 +19,8 @@ export const FOODSPECTOR_URL = "https://foodspector.pro"
 export const ALIEN_TRADE_URL = "https://alien-trade-web.vercel.app"
 export const AGENT_DECK_URL = "https://agent.niresh.tech"
 export const CHEMLAX_URL = "https://chem-laxx.vercel.app"
+export const CEX_URL = "https://cex.niresh.tech"
+export const CEX_REPO_URL = "https://github.com/the-niresh/cex"
 
 // Engineer-first positioning (2026-07-24). Real work only — no fabricated claims.
 export const HERO_CONTENT_1 = `Full-stack & AI systems engineer. I build production systems end to end — a multi-tenant SaaS, autonomous agents, and the infrastructure behind them. Ex-Tata Elxsi.`;
@@ -69,6 +72,14 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "cex — Spot Exchange in Rust",
+    image: cex,
+    url: CEX_URL,
+    repo: CEX_REPO_URL,
+    description: "A centralised spot exchange, built end to end: order book, matching, settlement, live market data and a trading screen.\n- The exchange is one deterministic state machine — apply(state, command) → events — running single-threaded over a durable Redis command log, so the whole state can be rebuilt by replaying it.\n- Money never becomes a float. Prices and quantities are integers everywhere, including in the browser, which parses the JSON text itself because JSON.parse would round a 64-bit integer first.\n- Four processes: engine owns state, api speaks HTTP, ws fans out market data, persist writes history to Postgres. The engine never waits on the database.\n- A gap in the market-data feed is assumed, not hoped against: every update carries a sequence number, and a book that misses one is marked stale until a fresh snapshot arrives.\n- 412 Rust tests, plus a Playwright suite that registers, deposits and trades against the real exchange — no mock backend anywhere.",
+    technologies: ["Rust", "Tokio", "Axum", "Redis", "PostgreSQL", "SQLx", "WebSocket", "React", "TypeScript", "Playwright", "Docker", "Traefik"],
+  },
   {
     title: "FoodSpector — Multi-tenant Food-Compliance SaaS",
     image: foodspector,
