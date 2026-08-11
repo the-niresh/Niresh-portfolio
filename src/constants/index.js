@@ -73,7 +73,7 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "cex - Spot Exchange in Rust",
+    title: "Centralized Spot Exchange - Spot Exchange in Rust",
     image: cex,
     url: CEX_URL,
     repo: CEX_REPO_URL,
