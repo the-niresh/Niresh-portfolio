@@ -33,7 +33,7 @@ const Blogs = () => {
           </span>
         </h1>
         <p className="max-w-2xl text-xl text-neutral-400">
-          One AI coding harness at a time, read properly and written up. Not what it does,
+          One open-source project at a time, read properly and written up. Not what it does,
           which is in the README, but how it actually works underneath.
         </p>
       </motion.header>
