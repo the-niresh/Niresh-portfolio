@@ -15,7 +15,7 @@
 // from, and every number has to be re-derivable by a reader. See
 // /srv/obsidian/social-media-vault/rules/long-form.md.
 
-import allAgree from "../../assets/readings/img-0024-all-agree.png";
+import allAgree from "../../assets/readings/img-0079-all-agree-five.png";
 import codex from "./codex";
 import archon from "./archon";
 import t3code from "./t3code";
@@ -30,7 +30,10 @@ import baalda from "./baalda";
 export const READINGS = [baalda, sentry, posthog, codex, archon, t3code];
 
 export const CONCLUSION = {
-  image: { src: allAgree, alt: "Codex, Archon and t3code all spend most of their code on isolation" },
+  image: {
+    src: allAgree,
+    alt: "Codex, Archon, t3code, PostHog and Sentry all spend most of their code on containment",
+  },
   title: "What they all agree on",
   body: "Codex spends eleven crates on sandboxes and policy. Archon gives every run its own copy of the repository, and keeps it when the run fails. t3code isolates each agent's working state and runs the same agent twice under different home directories. PostHog puts two circuit breakers on two different axes and instruments its own brake for false positives. Sentry gives its agent three verdicts so it can investigate without being allowed to write. Five teams, five problems, one answer underneath: make sure the thing cannot reach past what you handed it. That is not the conversation happening in public, where it is all about which model and how big the context window is. Inside these repositories almost none of the code is about that. The model is the cheap part now. The box around it is the work.",
 };
