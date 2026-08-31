@@ -22,12 +22,13 @@ import t3code from "./t3code";
 import posthog from "./posthog";
 import sentry from "./sentry";
 import baalda from "./baalda";
+import sentryVsPosthog from "./sentry-vs-posthog";
 
 // Newest first. The three harness readings came first and set the house rules;
 // PostHog and Sentry are the observability pair, read a week apart on purpose so
 // the overlap between them means something. Baalda is the odd one out and stays
 // last in reading order for that reason.
-export const READINGS = [baalda, sentry, posthog, codex, archon, t3code];
+export const READINGS = [sentryVsPosthog, baalda, sentry, posthog, codex, archon, t3code];
 
 export const CONCLUSION = {
   image: {

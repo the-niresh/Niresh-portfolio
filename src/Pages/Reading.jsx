@@ -24,19 +24,47 @@ const slugify = (text) =>
 
 /* ── inline `code` inside prose ──────────────────────────────────────────── */
 
+// Inline markup allowed inside a block's text: `code`, **bold**, and [[slug]]
+// pointing at another reading. Bold and wiki-links used to fall straight
+// through and render as literal asterisks and brackets on the page.
+const INLINE = /(`[^`]+`|\*\*[^*]+\*\*|\[\[[a-z0-9-]+\]\])/g;
+
 const inline = (text) =>
-  text.split(/(`[^`]+`)/g).map((part, i) =>
-    part.startsWith("`") && part.endsWith("`") ? (
-      <code
-        key={i}
-        className="rounded bg-neutral-800/70 px-1.5 py-0.5 font-mono text-[0.85em] text-purple-200"
-      >
-        {part.slice(1, -1)}
-      </code>
-    ) : (
-      part
-    ),
-  );
+  text.split(INLINE).map((part, i) => {
+    if (part.startsWith("`") && part.endsWith("`")) {
+      return (
+        <code
+          key={i}
+          className="rounded bg-neutral-800/70 px-1.5 py-0.5 font-mono text-[0.85em] text-purple-200"
+        >
+          {part.slice(1, -1)}
+        </code>
+      );
+    }
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={i} className="font-semibold text-neutral-100">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    if (part.startsWith("[[") && part.endsWith("]]")) {
+      const slug = part.slice(2, -2);
+      const target = getReading(slug);
+      // An unresolved link stays as plain text rather than a dead anchor.
+      if (!target) return slug;
+      return (
+        <Link
+          key={i}
+          to={`/blog/${slug}`}
+          className="text-purple-300 underline decoration-purple-800 underline-offset-4 transition hover:text-purple-200"
+        >
+          {target.name}
+        </Link>
+      );
+    }
+    return part;
+  });
 
 /* ── blocks ──────────────────────────────────────────────────────────────── */
 
