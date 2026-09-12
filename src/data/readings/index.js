@@ -23,12 +23,23 @@ import posthog from "./posthog";
 import sentry from "./sentry";
 import baalda from "./baalda";
 import sentryVsPosthog from "./sentry-vs-posthog";
+import plugAndPlayReviewer from "./plug-and-play-reviewer";
 
 // Newest first. The three harness readings came first and set the house rules;
 // PostHog and Sentry are the observability pair, read a week apart on purpose so
 // the overlap between them means something. Baalda is the odd one out and stays
 // last in reading order for that reason.
-export const READINGS = [sentryVsPosthog, baalda, sentry, posthog, codex, archon, t3code];
+// plugAndPlayReviewer is first because it is the only one Nire built rather than read.
+export const READINGS = [
+  plugAndPlayReviewer,
+  sentryVsPosthog,
+  baalda,
+  sentry,
+  posthog,
+  codex,
+  archon,
+  t3code,
+];
 
 export const CONCLUSION = {
   image: {
