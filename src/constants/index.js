@@ -4,6 +4,7 @@ import chemlaxx from "../assets/projects/chemlaxx.png";
 import alientrade from "../assets/projects/alientrade.png";
 import agentdeck from "../assets/projects/agentdeck.svg";
 import cex from "../assets/projects/cex.png";
+import plugandplayreviewer from "../assets/projects/plugandplayreviewer.png";
 
 export const NAME = "Niresh"
 export const WEBSITE_URL = "https://niresh.in/"
@@ -21,6 +22,8 @@ export const AGENT_DECK_URL = "https://agent.niresh.tech"
 export const CHEMLAX_URL = "https://chem-laxx.vercel.app"
 export const CEX_URL = "https://cex.niresh.tech"
 export const CEX_REPO_URL = "https://github.com/the-niresh/cex"
+export const REVIEWER_URL = "https://plugandplayreviewer.online"
+export const REVIEWER_REPO_URL = "https://github.com/the-niresh/plug-and-play-reviewer"
 
 // Engineer-first positioning (2026-07-24). Real work only - no fabricated claims.
 export const HERO_CONTENT_1 = `Full-stack & AI systems engineer. I build production systems end to end - a multi-tenant SaaS, autonomous agents, and the infrastructure behind them. Ex-Tata Elxsi.`;
@@ -72,6 +75,14 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "Plug and Play Reviewer - Private AI Code Review",
+    image: plugandplayreviewer,
+    url: REVIEWER_URL,
+    repo: REVIEWER_REPO_URL,
+    description: "An AI reviewer for GitHub pull requests that never receives your code.\n- Two processes, one boundary: a hosted control plane takes the webhook and stores job metadata only; a runner on your own machine fetches the diff, calls the model with your key, and posts nothing until a human approves.\n- The boundary is a test, not a promise: assert_no_private_columns runs against the live schema and fails the build if any hosted column could hold source, a diff, or a model key. The exemption list is empty and a test keeps it empty.\n- The model cannot mark its own finding safe to post. Verification and posting are system-owned fields, and the second scoring pass raises rather than guessing when it does not score every finding exactly once.\n- Bring your own key across 11 providers, four optional specialist reviewers, and review pings to Slack, Discord, Telegram or email - all delivered from the runner, never the server.\n- 1656 Python tests, a hosted-boundary test against the real database, and no published accuracy number, because the holdout to measure one honestly does not exist yet.",
+    technologies: ["Python", "FastAPI", "PostgreSQL", "Neon", "Next.js", "TypeScript", "Textual", "GitHub Apps", "Docker", "LLMs"],
+  },
   {
     title: "Centralized Spot Exchange - Spot Exchange in Rust",
     image: cex,
